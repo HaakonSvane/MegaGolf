@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BlackHole</key>
+	<dict>
+		<key>static friction</key>
+		<integer>1</integer>
+		<key>kinetic friction</key>
+		<integer>1</integer>
+		<key>restitution</key>
+		<integer>0</integer>
+		<key>density</key>
+		<integer>400</integer>
+	</dict>
+	<key>RedStar</key>
+	<dict>
+		<key>static friction</key>
+		<integer>1</integer>
+		<key>kinetic friction</key>
+		<integer>1</integer>
+		<key>restitution</key>
+		<integer>0</integer>
+		<key>density</key>
+		<integer>100</integer>
+	</dict>
+	<key>YellowStar</key>
+	<dict>
+		<key>static friction</key>
+		<integer>1</integer>
+		<key>kinetic friction</key>
+		<integer>1</integer>
+		<key>restitution</key>
+		<integer>0</integer>
+		<key>density</key>
+		<integer>120</integer>
+	</dict>
+	<key>WaterPlanet</key>
+	<dict>
+		<key>static friction</key>
+		<integer>1</integer>
+		<key>kinetic friction</key>
+		<integer>2</integer>
+		<key>restitution</key>
+		<real>0.01</real>
+		<key>density</key>
+		<real>1.8</real>
+	</dict>
+	<key>MoonPlanet</key>
+	<dict>
+		<key>static friction</key>
+		<real>0.6</real>
+		<key>kinetic friction</key>
+		<real>0.3</real>
+		<key>restitution</key>
+		<real>0.7</real>
+		<key>density</key>
+		<integer>1</integer>
+	</dict>
+	<key>FieldPlanet</key>
+	<dict>
+		<key>static friction</key>
+		<real>0.7</real>
+		<key>kinetic friction</key>
+		<real>0.4</real>
+		<key>restitution</key>
+		<real>0.3</real>
+		<key>density</key>
+		<real>1.5</real>
+	</dict>
+	<key>BunkerPlanet</key>
+	<dict>
+		<key>static friction</key>
+		<real>1.8</real>
+		<key>kinetic friction</key>
+		<integer>2</integer>
+		<key>restitution</key>
+		<real>0.1</real>
+		<key>density</key>
+		<real>1.3</real>
+	</dict>
+</dict>
+</plist>

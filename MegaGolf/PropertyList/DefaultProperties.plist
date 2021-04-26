@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SETTINGS_MENU_OPTIONS</key>
+	<array>
+		<string>Music volume</string>
+		<string>Sound effects volume</string>
+	</array>
+	<key>FONT_DEFAULT</key>
+	<string>Futura</string>
+	<key>DEFAULT_PLAYER_NAME</key>
+	<string>Player</string>
+</dict>
+</plist>

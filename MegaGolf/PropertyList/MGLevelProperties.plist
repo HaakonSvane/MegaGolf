@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SolarSystem1</key>
+	<dict>
+		<key>name</key>
+		<string>Lacaille 9352</string>
+		<key>systemID</key>
+		<integer>1</integer>
+		<key>systemStar</key>
+		<dict>
+			<key>type</key>
+			<string>RedStar</string>
+			<key>radius</key>
+			<integer>400</integer>
+			<key>angularVelocity</key>
+			<real>0.1</real>
+		</dict>
+		<key>levels</key>
+		<dict>
+			<key>Level_1_1</key>
+			<dict>
+				<key>name</key>
+				<string>Donut Plains</string>
+				<key>levelID</key>
+				<integer>1</integer>
+				<key>levelEntityType</key>
+				<string>fieldAndMoon</string>
+			</dict>
+			<key>Level_1_2</key>
+			<dict>
+				<key>name</key>
+				<string>Bunker Ahoy!</string>
+				<key>levelID</key>
+				<integer>2</integer>
+				<key>levelEntityType</key>
+				<string>bunkerAndTwoMoons</string>
+			</dict>
+			<key>Level_1_3</key>
+			<dict>
+				<key>name</key>
+				<string>Water wheels</string>
+				<key>levelID</key>
+				<integer>3</integer>
+				<key>levelEntityType</key>
+				<string>waterAndField</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>SolarSystem2</key>
+	<dict>
+		<key>name</key>
+		<string>51 Pegasi</string>
+		<key>systemID</key>
+		<integer>2</integer>
+		<key>systemStar</key>
+		<dict>
+			<key>type</key>
+			<string>YellowStar</string>
+			<key>radius</key>
+			<integer>500</integer>
+			<key>angularVelocity</key>
+			<real>-0.07000000000000001</real>
+		</dict>
+		<key>levels</key>
+		<dict>
+			<key>Level_2_1</key>
+			<dict>
+				<key>name</key>
+				<string>LEVEL 2-1</string>
+				<key>levelID</key>
+				<integer>1</integer>
+				<key>levelEntityType</key>
+				<string>bunkerAndTwoMoons</string>
+			</dict>
+			<key>Level_2_2</key>
+			<dict>
+				<key>name</key>
+				<string>LEVEL 2-2</string>
+				<key>levelID</key>
+				<integer>2</integer>
+				<key>levelEntityType</key>
+				<string>bunkerAndTwoMoons</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

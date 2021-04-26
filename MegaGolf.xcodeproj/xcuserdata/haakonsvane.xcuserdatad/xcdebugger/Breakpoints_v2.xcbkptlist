@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "ED97C173-A31A-451F-9C0D-92E334428C35"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E61E0F46-8A8F-4F19-8D96-E7E93D3EC99F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MegaGolf/Component/RotationComponent.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "omega"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "E61E0F46-8A8F-4F19-8D96-E7E93D3EC99F - 5b6a41610b38d5f4"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MegaGolf.RotationComponent.omega.getter : CoreGraphics.CGFloat"
+                  moduleName = "MegaGolf"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haakonsvane/Xcode_Projects/MegaGolf/MegaGolf/Component/RotationComponent.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "E61E0F46-8A8F-4F19-8D96-E7E93D3EC99F - 12e19d79acfe65f8"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MegaGolf.RotationComponent.omega.setter : CoreGraphics.CGFloat"
+                  moduleName = "MegaGolf"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haakonsvane/Xcode_Projects/MegaGolf/MegaGolf/Component/RotationComponent.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "E61E0F46-8A8F-4F19-8D96-E7E93D3EC99F - 34835b8cd39d97a5"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MegaGolf.RotationComponent.omega.modify : CoreGraphics.CGFloat"
+                  moduleName = "MegaGolf"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haakonsvane/Xcode_Projects/MegaGolf/MegaGolf/Component/RotationComponent.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "E61E0F46-8A8F-4F19-8D96-E7E93D3EC99F - cd39ce7faa5b2229"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MegaGolf.RotationComponent.omega.modify : CoreGraphics.CGFloat with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "MegaGolf"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haakonsvane/Xcode_Projects/MegaGolf/MegaGolf/Component/RotationComponent.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3337B662-3F76-472F-A3AB-589FCAD0E747"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MegaGolf/Scene/MGLoadingScreenScene.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8"
+            endingLineNumber = "8"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.RuntimeIssueBreakpoint">
+         <BreakpointContent
+            uuid = "5E8476E7-3AFB-4F30-AE7B-AB5E1A4B4EE5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            type = "8"
+            categories = "Metal Diagnostics">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "87EDC86F-86B5-443C-B72D-43DBC1ADAAE2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MegaGolf/View/Menus/MultiplayerLobbyView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "init(managingState:size:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "87EDC86F-86B5-443C-B72D-43DBC1ADAAE2 - 42743dca2592bd3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MegaGolf.MultiplayerLobbyView.init(managingState: MegaGolf.MGViewState, size: __C.CGSize) -&gt; MegaGolf.MultiplayerLobbyView"
+                  moduleName = "MegaGolf"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haakonsvane/Xcode_Projects/MegaGolf/MegaGolf/View/Menus/MultiplayerLobbyView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "5156">
+               </Location>
+               <Location
+                  uuid = "87EDC86F-86B5-443C-B72D-43DBC1ADAAE2 - 4610dd52b3feda54"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.GKEntity) -&gt; () in MegaGolf.MultiplayerLobbyView.init(managingState: MegaGolf.MGViewState, size: __C.CGSize) -&gt; MegaGolf.MultiplayerLobbyView"
+                  moduleName = "MegaGolf"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haakonsvane/Xcode_Projects/MegaGolf/MegaGolf/View/Menus/MultiplayerLobbyView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7F763038-356C-451E-A149-44D73FC6B1C7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MegaGolf/Factory/MenuFactory.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "waterAndField()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
