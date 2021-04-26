@@ -84,7 +84,7 @@ extension MGPresenter : ManagerDelegate {
             
             if self.firstLoad{
                 self.GCManager?.authenticate()
-                initialDelay = 2.0
+                initialDelay = 3.0
                 self.firstLoad = false
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + initialDelay) {
