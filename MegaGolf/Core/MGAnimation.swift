@@ -26,7 +26,7 @@ enum MGAnimation {
         return moveAct
     }
     
-    static func moveSmoothTo(to point: CGPoint, duration: TimeInterval) -> SKAction {
+    static func moveSmooth(to point: CGPoint, duration: TimeInterval) -> SKAction {
         let moveAct = SKAction.move(to: point, duration: duration)
         moveAct.timingFunction = {time in
             return simd_smoothstep(0, 1, time)

@@ -152,11 +152,11 @@ class MGGameScene : MGScene, SKPhysicsContactDelegate{
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
-        stateMachine?.notifyContactBegan(contact: contact)
+        stateMachine?.notifyContactBegan(contact: MGPhysicsContact(contact: contact))
     }
     
     func didEnd(_ contact: SKPhysicsContact) {
-        stateMachine?.notifyContactEnd(contact: contact)
+        stateMachine?.notifyContactEnd(contact: MGPhysicsContact(contact: contact))
     }
     
     func didEnterHazard(type: MGHazardType){
@@ -178,11 +178,13 @@ class MGGameScene : MGScene, SKPhysicsContactDelegate{
         guard let gState = (self.managingState as? GameSceneState) else{
             return
         }
-        gState.transmitData(data: MGGameData(pos: ball.getNode()!.position))
+        gState.transmitData(data: MGGameData(pos: ball.getNode()!.position, vel: ball.getPhysicsBody()!.velocity))
     }
     
     func onReceiveGameData(player: GKPlayer, data: MGGameData){
-        onlineBalls.first(where: {$0.getNode()!.name == player.gamePlayerID})?.getNode()?.position = data.pos
+        let ob = onlineBalls.first(where: {$0.getNode()!.name == player.gamePlayerID})
+        ob?.getNode()?.position = data.pos
+        ob?.getPhysicsBody()?.velocity = data.vel
     }
     
     func followGoal(){
@@ -199,4 +201,47 @@ class MGGameScene : MGScene, SKPhysicsContactDelegate{
         (self.camera as! MGCameraNode).followEntity(entity)
     }
     
+}
+
+class MGPhysicsContact {
+    var bodyA: SKPhysicsBody
+    var bodyB: SKPhysicsBody
+    var collisionImpulse: CGFloat
+    var contactPoint: CGPoint
+    var contactNormal: CGVector
+    
+    init(contact: SKPhysicsContact){
+        self.bodyA = contact.bodyA
+        self.bodyB = contact.bodyB
+        self.collisionImpulse = contact.collisionImpulse
+        self.contactPoint = contact.contactPoint
+        self.contactNormal = contact.contactNormal
+    }
+    
+    func contains(_ entity: GKEntity?) -> Bool{
+        return (bodyA.node as? MGNode)?.parentEntity === entity || (bodyB.node as? MGNode)?.parentEntity === entity
+    }
+    
+    var planet: MGPlanetEntity?{
+        get{
+            if let ent = ((bodyA.node as? MGNode)?.parentEntity as? MGPlanetEntity) {
+                return ent
+            }
+            if let ent = ((bodyB.node as? MGNode)?.parentEntity as? MGPlanetEntity) {
+                return ent
+            }
+            return nil
+        }
+    }
+    var blackHole: BlackHoleEntity? {
+        get{
+            if let ent = ((bodyA.node as? MGNode)?.parentEntity as? BlackHoleEntity) {
+                return ent
+            }
+            if let ent = ((bodyB.node as? MGNode)?.parentEntity as? BlackHoleEntity) {
+                return ent
+            }
+            return nil
+        }
+    }
 }

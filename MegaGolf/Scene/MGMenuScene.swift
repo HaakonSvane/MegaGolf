@@ -124,6 +124,6 @@ class MGMenuScene : MGScene {
         guard let scaleBackTo = scaleBackTo, let moveToPos = moveToPos else {
             return
         }
-        cam?.run(SKAction.group([anim.scaleSmooth(to: scaleBackTo, duration: 0.7), anim.moveSmoothTo(to: moveToPos, duration: 0.5)]))
+        cam?.run(SKAction.group([anim.scaleSmooth(to: scaleBackTo, duration: 0.7), anim.moveSmooth(to: moveToPos, duration: 0.5)]))
     }
 }

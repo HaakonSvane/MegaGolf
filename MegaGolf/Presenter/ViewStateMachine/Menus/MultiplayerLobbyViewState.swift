@@ -72,7 +72,7 @@ class MultiplayerLobbyViewState : MGViewState {
         let man = (stateMachine as! MGViewStateMachine).manager
 
         let camPosX = associatedView!.size.width * self.camScaleToSelect * (0.4-0.17) + (CGFloat(self.currentSystemID)-1) * 10000
-        man?.delegate?.getCurrentScene()?.camera?.run(anim.moveSmoothTo(to: CGPoint(x: camPosX, y: 0), duration: 0.5))
+        man?.delegate?.getCurrentScene()?.camera?.run(anim.moveSmooth(to: CGPoint(x: camPosX, y: 0), duration: 0.5))
     }
     
     private func centerCamOnCurrentSystem(){
@@ -80,7 +80,7 @@ class MultiplayerLobbyViewState : MGViewState {
         let camPos = CGPoint(x: (CGFloat(self.currentSystemID)-1) * 10000, y: 0)
         man?.delegate?.getCurrentScene()?.camera?.run(SKAction.group([
                                                                         anim.scaleSmooth(to: self.camScaleToStart, duration: 0.7),
-                                                                        anim.moveSmoothTo(to: camPos, duration: 0.5)]))
+                                                                        anim.moveSmooth(to: camPos, duration: 0.5)]))
     }
     
     private func resetPlayersInfo(){

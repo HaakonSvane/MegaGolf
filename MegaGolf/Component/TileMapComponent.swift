@@ -23,8 +23,8 @@ class TileMapComponent : GKComponent {
         guard let tileSet = SKTileSet(named: tileSetName) else {
             fatalError("The tile set with name \(tileSetName) could not be found!")
         }
-        let rows = ceil(size.width/tileSet.defaultTileSize.width)
-        let cols = ceil(size.height/tileSet.defaultTileSize.height)
+        let rows = ceil(size.height/tileSet.defaultTileSize.height)
+        let cols = ceil(size.width/tileSet.defaultTileSize.width)
         self.init(tileSetName: tileSetName, columns: Int(cols), rows: Int(rows))
     }
     

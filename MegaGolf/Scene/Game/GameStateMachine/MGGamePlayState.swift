@@ -7,6 +7,8 @@
 
 import GameKit
 
+
+
 class MGGamePlayState : GKState {
     weak var ball: GolfBallEntity?
     weak var goal: BlackHoleEntity?
@@ -15,7 +17,7 @@ class MGGamePlayState : GKState {
         super.init()
     }
     
-    func onContactBegin(contact: SKPhysicsContact){}
-    func onContactEnd(contact: SKPhysicsContact){}
+    func onContactBegin(contact: MGPhysicsContact){}
+    func onContactEnd(contact: MGPhysicsContact){}
     
 }

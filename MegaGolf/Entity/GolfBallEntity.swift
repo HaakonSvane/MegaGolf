@@ -23,14 +23,16 @@ class GolfBallEntity : GKEntity{
             textureName = "golfBall"
         }
         
+        let ballScale: CGFloat = 0.3
+        
         let nodeComp = NodeComponent()
         let spriteComp = SpriteComponent(with: textureName, addNormalMap: true)
-        let physComp = PhysicsComponent(bodyType: .circular(radius: spriteComp.spriteNode.size.width/2))
+        let physComp = PhysicsComponent(bodyType: .circular(radius: spriteComp.spriteNode.size.width/2*ballScale))
         let touchComp = TouchableCompoment()
         let lightRComp = LightReceiverComponent()
         let audioComp = AudioComponent(sound: MGAudioUnit(fileName: "ballHit", type: .effect), loopAudio: false)
         let shapeComp = ShapeComponent(shapeType: .rectangle(CGSize(width: 1, height: 10)), name: "launcherShape")
-        let scaleComp = ScaleComponent(x: 0.3, y: 0.3)
+        let scaleComp = ScaleComponent(x: ballScale, y: ballScale)
         let haptComp = HapticComponent(impact: .light)
         let orbitComp = OrbitComponent()
         let dataComp = DataStoreComponent()

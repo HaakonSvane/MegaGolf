@@ -21,11 +21,11 @@ class MGGamePlayStateMachine : GKStateMachine{
         }
     }
     
-    func notifyContactBegan(contact: SKPhysicsContact){
+    func notifyContactBegan(contact: MGPhysicsContact){
         (self.currentState as? MGGamePlayState)?.onContactBegin(contact: contact)
     }
     
-    func notifyContactEnd(contact: SKPhysicsContact){
+    func notifyContactEnd(contact: MGPhysicsContact){
         (self.currentState as? MGGamePlayState)?.onContactEnd(contact: contact)
     }
 }

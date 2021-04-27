@@ -13,6 +13,13 @@ enum MGContainerLocator{
     case all
 }
 
+protocol InternalTouchEventDelegate : AnyObject{
+    func _onTouchDown(touches: Set<UITouch>,event: UIEvent?) -> Void
+    func _onTouchUp(touches: Set<UITouch>,event: UIEvent?) -> Void
+    func _onTouchMove(touches: Set<UITouch>,event: UIEvent?) -> Void
+    func _onTouchCancelled(touches: Set<UITouch>,event: UIEvent?) -> Void
+}
+
 class MGNode : SKNode{
     
     weak var touchDelegate: InternalTouchEventDelegate?

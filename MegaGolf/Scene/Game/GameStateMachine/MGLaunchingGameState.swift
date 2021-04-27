@@ -5,48 +5,6 @@
 //  Created by Haakon Svane on 25/03/2021.
 //
 
-class MGPhysicsContact {
-    var bodyA: SKPhysicsBody
-    var bodyB: SKPhysicsBody
-    var collisionImpulse: CGFloat
-    var contactPoint: CGPoint
-    var contactNormal: CGVector
-    
-    init(contact: SKPhysicsContact){
-        self.bodyA = contact.bodyA
-        self.bodyB = contact.bodyB
-        self.collisionImpulse = contact.collisionImpulse
-        self.contactPoint = contact.contactPoint
-        self.contactNormal = contact.contactNormal
-    }
-    
-    func contains(_ entity: GKEntity?) -> Bool{
-        return (bodyA.node as? MGNode)?.parentEntity === entity || (bodyB.node as? MGNode)?.parentEntity === entity
-    }
-    
-    var planet: MGPlanetEntity?{
-        get{
-            if let ent = ((bodyA.node as? MGNode)?.parentEntity as? MGPlanetEntity) {
-                return ent
-            }
-            if let ent = ((bodyB.node as? MGNode)?.parentEntity as? MGPlanetEntity) {
-                return ent
-            }
-            return nil
-        }
-    }
-    var blackHole: BlackHoleEntity? {
-        get{
-            if let ent = ((bodyA.node as? MGNode)?.parentEntity as? BlackHoleEntity) {
-                return ent
-            }
-            if let ent = ((bodyB.node as? MGNode)?.parentEntity as? BlackHoleEntity) {
-                return ent
-            }
-            return nil
-        }
-    }
-}
 
 import GameKit
 
@@ -56,12 +14,26 @@ class MGLaunchingGameState : MGGamePlayState {
     let cutoffVelocity : CGFloat = 4
     
     // For storing the last 10 recorded velocities of the ball
-    var lastVelocities : FiniteStack<CGVector> = FiniteStack<CGVector>(numItems: 10)
+    private var lastVelocities : FiniteStack<CGVector> = FiniteStack<CGVector>(numItems: 10)
 
-    var lastContactPlanet: MGPlanetEntity?
-    var lastRestOnPlanet: MGPlanetEntity?
-    var lastRestAngle: CGFloat
-    var updateFlag: Bool = true
+    private var lastContactPlanet: MGPlanetEntity?
+    private var lastRestOnPlanet: MGPlanetEntity?
+    private var lastRestAngle: CGFloat
+    private var updateFlag: Bool = true
+    
+    private var averageVelocity: CGVector{
+        get{
+            var sum: CGVector = .zero
+            var count = 0
+            for element in lastVelocities{
+                if let elem = element{
+                    sum = sum + elem
+                    count += 1
+                }
+            }
+            return sum/CGFloat(count)
+        }
+    }
     
     override init(){
         self.lastRestAngle = 0
@@ -80,19 +52,7 @@ class MGLaunchingGameState : MGGamePlayState {
         self.ball?.component(ofType: PhysicsComponent.self)?.collisionBitMask = 0b00001
         self.updateFlag = true
     }
-    private var averageVelocity: CGVector{
-        get{
-            var sum: CGVector = .zero
-            var count = 0
-            for element in lastVelocities{
-                if let elem = element{
-                    sum = sum + elem
-                    count += 1
-                }
-            }
-            return sum/CGFloat(count)
-        }
-    }
+
     override func update(deltaTime seconds: TimeInterval) {
         if !updateFlag {return}
         // Friction does not work perfectly between nodes when under the effect of a SKFieldNode.
@@ -171,18 +131,17 @@ class MGLaunchingGameState : MGGamePlayState {
         self.stateMachine?.enter(MGAimingGameState.self)
     }
     
-    override func onContactBegin(contact: SKPhysicsContact){
-        let cont = MGPhysicsContact(contact: contact)
-        lastContactPlanet = cont.planet
+    override func onContactBegin(contact: MGPhysicsContact){
+        lastContactPlanet = contact.planet
         guard let scn = (stateMachine as? MGGamePlayStateMachine)?.parentScene else {
             return
         }
-        if cont.contains(self.goal) && cont.contains(self.ball){
+        if contact.contains(self.goal) && contact.contains(self.ball){
             self.ball?.getPhysicsBody()?.isDynamic = false
             self.ball?.getPhysicsBody()?.velocity = .zero
             scn.didEnterGoal()
             self.ball?.component(ofType: ActionAnimationComponent.self)?.runAnimation(withName: "scaleAndFade", orderType: .parallel)
-        }else if cont.contains(self.ball), let p = cont.planet {
+        }else if contact.contains(self.ball), let p = contact.planet {
             switch p{
             case is WaterPlanetEntity:
                 self.ball?.getPhysicsBody()?.isDynamic = false
@@ -199,7 +158,7 @@ class MGLaunchingGameState : MGGamePlayState {
         
     }
     
-    override func onContactEnd(contact: SKPhysicsContact) {
+    override func onContactEnd(contact: MGPhysicsContact) {
     }
     
     

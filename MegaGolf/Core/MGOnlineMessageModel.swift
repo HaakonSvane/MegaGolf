@@ -9,6 +9,7 @@ import SpriteKit
 
 struct MGGameData : Codable {
     let pos: CGPoint
+    let vel: CGVector
 }
 
 enum MGLobbyData {

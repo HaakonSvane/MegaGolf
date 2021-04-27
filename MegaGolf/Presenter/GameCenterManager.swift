@@ -12,7 +12,7 @@ class GameCenterManager: NSObject, GKLocalPlayerListener{
     private static let DEFAULT_ENCODER = JSONEncoder()
     private static let DEFAULT_DECODER = JSONDecoder()
     
-    weak var delegate : ManagerDelegate?
+    weak var delegate : MGManagerDelegate?
     weak var gcLoginViewController : UIViewController?
     weak var accessWindow: GKAccessPoint?
     

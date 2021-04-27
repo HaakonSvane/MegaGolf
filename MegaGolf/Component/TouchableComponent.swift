@@ -9,13 +9,6 @@ import GameplayKit
 
 
 
-protocol InternalTouchEventDelegate : AnyObject{
-    func _onTouchDown(touches: Set<UITouch>,event: UIEvent?) -> Void
-    func _onTouchUp(touches: Set<UITouch>,event: UIEvent?) -> Void
-    func _onTouchMove(touches: Set<UITouch>,event: UIEvent?) -> Void
-    func _onTouchCancelled(touches: Set<UITouch>,event: UIEvent?) -> Void
-}
-
 /**
     A component for adding a touch listener to the entity. Custom behavior is set by specifying the touch methods.
     

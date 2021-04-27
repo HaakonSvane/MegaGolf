@@ -9,7 +9,7 @@ import GameKit
 
 class MGViewManager{
     private var viewStateMachine : MGViewStateMachine?
-    weak var delegate : ManagerDelegate?
+    weak var delegate : MGManagerDelegate?
     let viewSize: CGSize
     weak var currentView: MGView? {
         return (viewStateMachine?.currentState as? MGViewState)?.associatedView

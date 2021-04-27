@@ -207,6 +207,7 @@
 		654F8C912613A38100A767C1 /* BlackHoleEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackHoleEntity.swift; sourceTree = "<group>"; };
 		6551450726233080001BD4C9 /* golfBallShotEmitter.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = golfBallShotEmitter.sks; sourceTree = "<group>"; };
 		6551451126233FAB001BD4C9 /* MovingDashedFill.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = MovingDashedFill.fsh; sourceTree = "<group>"; };
+		655386102636B2400005C75C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6558D8412614A21800697C85 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		6558D8462614A2C900697C85 /* GameCenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenterManager.swift; sourceTree = "<group>"; };
 		655E5CE8261E233C00FC7F01 /* Level_1_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level_1_1.swift; sourceTree = "<group>"; };
@@ -401,14 +402,14 @@
 			path = Game;
 			sourceTree = "<group>";
 		};
-		650FA6B52607F8D80088D7C3 /* Containers */ = {
+		650FA6B52607F8D80088D7C3 /* Container */ = {
 			isa = PBXGroup;
 			children = (
 				657C27B825F809DC003D764D /* SKLightNodeContainer.swift */,
 				650FA6B02607F8AA0088D7C3 /* SKShapeNodeContainer.swift */,
 				653F2AC92604F8050069614C /* MGLabelNodeContainer.swift */,
 			);
-			path = Containers;
+			path = Container;
 			sourceTree = "<group>";
 		};
 		6520EFE825F0ED8D008748C2 /* Core */ = {
@@ -425,14 +426,14 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		653F2AC32604F7110069614C /* MGNodes */ = {
+		653F2AC32604F7110069614C /* CustomNode */ = {
 			isa = PBXGroup;
 			children = (
 				6520EFE925F0ED9C008748C2 /* MGNode.swift */,
 				652693E726054A8C00E1654D /* MGLabelNode.swift */,
 				654F8C6D26134A2100A767C1 /* MGCameraNode.swift */,
 			);
-			path = MGNodes;
+			path = CustomNode;
 			sourceTree = "<group>";
 		};
 		653F2AC72604F7D40069614C /* Extension */ = {
@@ -518,7 +519,7 @@
 			path = SoundAsset;
 			sourceTree = "<group>";
 		};
-		659B138B2600E7CA00FD5FFC /* ViewsStateMachine */ = {
+		659B138B2600E7CA00FD5FFC /* ViewStateMachine */ = {
 			isa = PBXGroup;
 			children = (
 				65E91F5825F61B96004A88CD /* MGViewStateMachine.swift */,
@@ -527,14 +528,14 @@
 				6504E469260B54EA00CDC79D /* Game */,
 				6504E468260B54E000CDC79D /* Menus */,
 			);
-			path = ViewsStateMachine;
+			path = ViewStateMachine;
 			sourceTree = "<group>";
 		};
 		659B13A8260124DB00FD5FFC /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				65DA3E53260903AC0072E8D7 /* ScenesStateMachine */,
-				659B138B2600E7CA00FD5FFC /* ViewsStateMachine */,
+				65DA3E53260903AC0072E8D7 /* SceneStateMachine */,
+				659B138B2600E7CA00FD5FFC /* ViewStateMachine */,
 				65A9F9DC26023DFF005A7E63 /* MGSceneManager.swift */,
 				6504E3FA26090EAE00CDC79D /* MGViewManager.swift */,
 				6558D8462614A2C900697C85 /* GameCenterManager.swift */,
@@ -654,6 +655,7 @@
 		65C95CA325EE37AC00EA9857 = {
 			isa = PBXGroup;
 			children = (
+				655386102636B2400005C75C /* README.md */,
 				65C95CAE25EE37AC00EA9857 /* MegaGolf */,
 				65C95CC625EE37AD00EA9857 /* MegaGolfTests */,
 				65C95CD125EE37AD00EA9857 /* MegaGolfUITests */,
@@ -677,9 +679,9 @@
 			children = (
 				65DB45C12621E3A8009D08BC /* Asset */,
 				658130B125FF80170065B0E7 /* PropertyList */,
-				650FA6B52607F8D80088D7C3 /* Containers */,
+				650FA6B52607F8D80088D7C3 /* Container */,
 				653F2AC72604F7D40069614C /* Extension */,
-				653F2AC32604F7110069614C /* MGNodes */,
+				653F2AC32604F7110069614C /* CustomNode */,
 				65A9F9CC26013277005A7E63 /* Backend */,
 				658130A325FF7DD40065B0E7 /* View */,
 				659B13A8260124DB00FD5FFC /* Presenter */,
@@ -728,7 +730,7 @@
 			path = music;
 			sourceTree = "<group>";
 		};
-		65DA3E53260903AC0072E8D7 /* ScenesStateMachine */ = {
+		65DA3E53260903AC0072E8D7 /* SceneStateMachine */ = {
 			isa = PBXGroup;
 			children = (
 				65DA3E54260903BF0072E8D7 /* MGSceneStateMachine.swift */,
@@ -737,7 +739,7 @@
 				65DA3E6D2609050C0072E8D7 /* GameSceneState.swift */,
 				6504E420260A179A00CDC79D /* LoadingSceneState.swift */,
 			);
-			path = ScenesStateMachine;
+			path = SceneStateMachine;
 			sourceTree = "<group>";
 		};
 		65DB45C12621E3A8009D08BC /* Asset */ = {
@@ -1190,7 +1192,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1200;
+				MARKETING_VERSION = 0.1300;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Hkon.MegaGolf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1214,7 +1216,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1200;
+				MARKETING_VERSION = 0.1300;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Hkon.MegaGolf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

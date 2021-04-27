@@ -19,18 +19,25 @@ class GhostGolfBallEntity : GKEntity {
             textureName = "golfBall"
         }
         
+        let ballScale: CGFloat = 0.3
         let nodeComp = NodeComponent()
         let spriteComp = SpriteComponent(with: textureName, addNormalMap: true)
+        let physComp = PhysicsComponent(bodyType: .circular(radius: spriteComp.spriteNode.size.width/2*ballScale))
         let labelComp = LabelComponent(numLabels: 1)
         let lightRComp = LightReceiverComponent()
-        let scaleComp = ScaleComponent(x: 0.3, y: 0.3)
+        let scaleComp = ScaleComponent(x: ballScale, y: ballScale)
         let animComp = ActionAnimationComponent()
         
         let radius = spriteComp.spriteNode.size.width/2
         
+        physComp.categoryBitMask = 0b00000
+        physComp.fieldBitMask = 0b00000
+        physComp.contactBitMask = 0b00000
+        physComp.collisionBitMask = 0b0000
+        
         labelComp.labels.shadow(option: true, locator: .all)
         labelComp.labels.setSize(size: 30, locator: .all)
-        labelComp.labels.position.y = radius*1.4
+        labelComp.labels.position.y = radius*1.5
         labelComp.labels.setText(text: ballName, locator: .all)
         
         lightRComp.lightingBitMask = 0b00011
@@ -44,6 +51,7 @@ class GhostGolfBallEntity : GKEntity {
         self.addComponent(spriteComp)
         self.addComponent(lightRComp)
         self.addComponent(scaleComp)
+        self.addComponent(physComp)
         self.addComponent(animComp)
         self.addComponent(labelComp)
     }

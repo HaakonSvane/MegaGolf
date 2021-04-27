@@ -15,17 +15,15 @@ class MGAimingGameState : MGGamePlayState {
     // The relative distance (of maxDist) before the ball is to be considered for launch.
     let threshLaunch: CGFloat = 0.17
     
-    var dist: CGFloat
-    var angle: CGFloat
-    
-    var touchDownPos: CGPoint
-    
+    private var dist: CGFloat
+    private var angle: CGFloat
+    private var lastTouchDownPos: CGPoint
     private var isAiming: Bool
     
     override init(){
         self.dist = 0
         self.angle = 0
-        self.touchDownPos = .zero
+        self.lastTouchDownPos = .zero
         self.isAiming = false
         super.init()
     }
@@ -40,7 +38,7 @@ class MGAimingGameState : MGGamePlayState {
         self.ball?.component(ofType: ShapeComponent.self)?.shapes.visible(option: true, locator: .forName("anchorShape"))
         
         ball?.component(ofType: TouchableCompoment.self)?.onTouchDown = {touches, event in
-            self.touchDownPos = touches.first!.location(in: (self.stateMachine as! MGGamePlayStateMachine).parentScene!)
+            self.lastTouchDownPos = touches.first!.location(in: (self.stateMachine as! MGGamePlayStateMachine).parentScene!)
             self.ball?.component(ofType: HapticComponent.self)?.run(impactType: .light)
             self.ball?.component(ofType: ShapeComponent.self)?.shapes.visible(option: true, locator: .forName("launcherShape"))
         }
@@ -63,7 +61,7 @@ class MGAimingGameState : MGGamePlayState {
         }
         
         ball?.component(ofType: TouchableCompoment.self)?.onTouchMove = {touches, event in
-            self.touchDownPos = touches.first!.location(in: (self.stateMachine as! MGGamePlayStateMachine).parentScene!)
+            self.lastTouchDownPos = touches.first!.location(in: (self.stateMachine as! MGGamePlayStateMachine).parentScene!)
             self.ball?.component(ofType: ShapeComponent.self)?.shapes.visible(option: true, locator: .forName("launcherShape"))
             self.ball?.component(ofType: ShapeComponent.self)?.shapes.visible(option: true, locator: .forName("aimerShape"))
             self.isAiming = true
@@ -99,7 +97,7 @@ class MGAimingGameState : MGGamePlayState {
     }
     
     private func aimBall(){
-        let relPos = touchDownPos - ball!.getNode()!.position
+        let relPos = lastTouchDownPos - ball!.getNode()!.position
         let ballScale = ball!.component(ofType: ScaleComponent.self)!.scaleX
         self.angle = relPos.angle
         self.dist = relPos.length().clamped(to: 0...maxDist)

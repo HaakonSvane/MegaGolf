@@ -28,7 +28,7 @@ class MainMenuViewState : MGViewState{
         }
         
         man?.delegate?.getCurrentScene()?.camera?.run(
-            SKAction.group([anim.scaleSmooth(to: 9, duration: 1), anim.moveSmoothTo(to: CGPoint(x: associatedView!.size.width*9/5, y: 0), duration: 1)])
+            SKAction.group([anim.scaleSmooth(to: 9, duration: 1), anim.moveSmooth(to: CGPoint(x: associatedView!.size.width*9/5, y: 0), duration: 1)])
         )
 
         // Hide the buttons

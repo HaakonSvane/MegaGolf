@@ -11,7 +11,7 @@ class MGSceneManager{
     
 
     private var sceneStateMachine: MGSceneStateMachine?
-    weak var delegate: ManagerDelegate?
+    weak var delegate: MGManagerDelegate?
     let sceneSize: CGSize
     var currentScene: MGScene? {
         get{

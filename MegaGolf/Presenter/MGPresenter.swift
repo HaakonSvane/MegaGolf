@@ -7,7 +7,7 @@
 
 import GameKit
 
-protocol ManagerDelegate : AnyObject{
+protocol MGManagerDelegate : AnyObject{
     func addViewToCurrentScene(_ view: MGView, isGUI: Bool) -> Void
     func removeViewFromCurrentScene(_ view: MGView) -> Void
     func loadMenus() -> Void
@@ -46,12 +46,12 @@ class MGPresenter : GameViewController{
         if let view = self.view as! SKView? {
             self.skView = view
             view.ignoresSiblingOrder = true
-            view.showsFPS = true
-            view.showsNodeCount = true
+            view.showsFPS = false
+            view.showsNodeCount = false
             view.showsPhysics = false
             view.showsFields = false
-            view.showsDrawCount = true
-            view.showsQuadCount = true
+            view.showsDrawCount = false
+            view.showsQuadCount = false
         }else{
             fatalError("Failed to find SKView!")
         }
@@ -59,14 +59,14 @@ class MGPresenter : GameViewController{
         self.viewManager = MGViewManager(presenter: self, viewSize: skView!.frame.size)
         self.GCManager = GameCenterManager(presenter: self)
         loadMenus()
-        //loadGame(systemID: 1, levelID: 3) // System ID 0 refers to the debug level
+        //loadGame(systemID: 0, levelID: 1) // System ID 0 refers to the debug level
     }
 
     
 }
 
 
-extension MGPresenter : ManagerDelegate {
+extension MGPresenter : MGManagerDelegate {
     
     func loadMenus(){
         if GCManager?.match != nil {GCManager?.disconnectMatch()}
