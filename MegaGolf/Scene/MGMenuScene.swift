@@ -16,7 +16,7 @@ class MGMenuScene : MGScene {
     
     override init(size: CGSize) {
         systems = []
-        music = MGMusicEntity(songNamed: "mainMenuTheme.mp3")
+        music = MGMusicEntity(songNamed: "Home is where the menu is.mp3")
         
         super.init(size: size)
         (self.camera as? MGCameraNode)?.cameraSpeed = 50

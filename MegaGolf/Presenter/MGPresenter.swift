@@ -55,11 +55,14 @@ class MGPresenter : GameViewController{
         }else{
             fatalError("Failed to find SKView!")
         }
+        // Initializing the managers
         self.sceneManager = MGSceneManager(presenter: self, sceneSize: skView!.frame.size)
         self.viewManager = MGViewManager(presenter: self, viewSize: skView!.frame.size)
         self.GCManager = GameCenterManager(presenter: self)
+        
+        // Loading the menus (or game if uncommented)
         loadMenus()
-        //loadGame(systemID: 0, levelID: 1) // System ID 0 refers to the debug level
+        //loadGame(systemID: 1, levelID: 2) // System ID 0 refers to the debug level
     }
 
     
@@ -75,6 +78,8 @@ extension MGPresenter : MGManagerDelegate {
         
         // Delay that is presented for the first load. This is to ensure that the Game Center authentification result is logged before entering the main menu.
         var initialDelay = 0.0
+        // The dispach group is notified of the async calls. This is to ensure that if we where to ever force the menus
+        // to load two times, they will happen sequentially and not in parallell (causing crashes due to strange behaviour with the state machines.. Trust me on this...)
         self.dispatchGroup.enter()
         DispatchQueue.global(qos: .background).async {
             self.viewManager?.loadMenuViews()
@@ -87,6 +92,7 @@ extension MGPresenter : MGManagerDelegate {
                 initialDelay = 3.0
                 self.firstLoad = false
             }
+            // After the views have loaded and the menu scene has been initialized, we enter the main thread and present the newly created scene.
             DispatchQueue.main.asyncAfter(deadline: .now() + initialDelay) {
                 self.skView?.presentScene((self.sceneManager?.currentScene)!, transition: SKTransition.fade(with: .black, duration: 0.2))
                 self.dispatchGroup.leave()
@@ -110,6 +116,13 @@ extension MGPresenter : MGManagerDelegate {
         }
         
     }
+    
+    /**
+        Adds a given view to the current active scene.
+        - Parameters:
+            - view: The MGView to add to the current scene.
+            - isGUI: Boolean flag to indicate that the view should be treated as a GUI (following camera and exempt from world node shader effects).
+     */
     func addViewToCurrentScene(_ view: MGView, isGUI: Bool){
         guard let scn = sceneManager?.currentScene else{
             fatalError("There is no current scene in the scene manager.")
@@ -123,6 +136,11 @@ extension MGPresenter : MGManagerDelegate {
 
     }
     
+    /**
+        Removes the given view from the current view. If the views are just manually removed from their parent scene, the references to the scene entities are still in the `MGScene`.
+        - Parameters:
+            - view: The reference to the view to remove.
+     */
     func removeViewFromCurrentScene(_ view: MGView){
         guard let scn = sceneManager?.currentScene else{
             fatalError("There is no current scene in the scene manager.")
@@ -131,14 +149,27 @@ extension MGPresenter : MGManagerDelegate {
         view.run(SKAction.removeFromParent())
     }
     
+    /**
+        Gets all the entities currently in the active scene
+        - Returns: A list of all entities in the scene. If no there is no scene, returns `nil`.
+     */
     func getCurrentSceneEntities() -> [GKEntity]? {
         return sceneManager?.currentScene!.entities ?? nil
     }
     
+    /**
+        Gets the current scene from the scene manager
+        - Returns: The current scene (nil if none).
+     */
     func getCurrentScene() -> MGScene? {
         return sceneManager?.currentScene
     }
     
+    /**
+        Notifies the presenter that a scene value change has occured. The method processes the value change and reacts accordingly.
+        - Parameters:
+            - val: An `MGSceneValueChange` instance containing the type of value change.
+     */
     func onNotifySceneValueChange(val: MGSceneValueChange){
         switch val {
         case .golfShots(let value):
@@ -168,12 +199,20 @@ extension MGPresenter : MGManagerDelegate {
         }
     }
     
+    /**
+        Sets or hides the Game Center access window (small circular window with a reference to local player profile).
+        - Parameters:
+            - option: Boolean value on whether or not to show the access window.
+     */
     func showGCAccessWindow(_ option: Bool) {
         if GCManager?.accessWindow?.isActive != option {
             GCManager?.accessWindow?.isActive = option
         }
     }
-    
+    /**
+     Gets the authentication status of the local player.
+        - Returns: Boolean value on whether or not the local player is authenticated.
+     */
     func isGCAuthenticated() -> Bool {
         guard let val = self.GCManager?.isAuthenticated else {
             return false

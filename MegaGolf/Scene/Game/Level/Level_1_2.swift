@@ -20,7 +20,12 @@ class Level_1_2 : MGGameScene, MGLevelSceneProtocol{
                    goalRadius: 70,
                    levelPar: 10,
                    onlineMatch: onlineMatch)
+     
+        let music = MGMusicEntity(songNamed: "Floatation device.mp3")
         
+        self.entities.append(music)
+        
+        self.addChild(music.getNode()!, isGUI: false)
     }
     
     required init?(coder aDecoder: NSCoder) {

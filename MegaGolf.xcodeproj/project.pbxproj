@@ -35,6 +35,12 @@
 		653F2ABA2604B18C0069614C /* UIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653F2AB92604B18C0069614C /* UIFactory.swift */; };
 		653F2ABF2604F2DE0069614C /* MGSettingsPaneEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653F2ABE2604F2DE0069614C /* MGSettingsPaneEntity.swift */; };
 		653F2ACA2604F8050069614C /* MGLabelNodeContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653F2AC92604F8050069614C /* MGLabelNodeContainer.swift */; };
+		654A97452638D214007F6867 /* Steam Machine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 654A973F2638D213007F6867 /* Steam Machine.mp3 */; };
+		654A97462638D214007F6867 /* Floatation device.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 654A97402638D213007F6867 /* Floatation device.mp3 */; };
+		654A97472638D214007F6867 /* Astronauts Incorporated.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 654A97412638D213007F6867 /* Astronauts Incorporated.mp3 */; };
+		654A97482638D214007F6867 /* Singularity.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 654A97422638D213007F6867 /* Singularity.mp3 */; };
+		654A97492638D214007F6867 /* Home is where the menu is.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 654A97432638D213007F6867 /* Home is where the menu is.mp3 */; };
+		654A974A2638D214007F6867 /* Sunshine in disguise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 654A97442638D214007F6867 /* Sunshine in disguise.mp3 */; };
 		654D4E9F261CBD0D00D44793 /* fieldPlanetEmitter.sks in Resources */ = {isa = PBXBuildFile; fileRef = 654D4E9D261CBD0D00D44793 /* fieldPlanetEmitter.sks */; };
 		654D4EA0261CBD0D00D44793 /* EmitterAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 654D4E9E261CBD0D00D44793 /* EmitterAsset.xcassets */; };
 		654D4EA5261CC19700D44793 /* ParticleEmitterComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654D4EA4261CC19700D44793 /* ParticleEmitterComponent.swift */; };
@@ -101,7 +107,6 @@
 		65BEF2F1261B7291004BCAE7 /* ActionAnimationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BEF2F0261B7291004BCAE7 /* ActionAnimationComponent.swift */; };
 		65BEF2F6261B9F41004BCAE7 /* MGAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BEF2F5261B9F41004BCAE7 /* MGAnimation.swift */; };
 		65C29979262EE56500A9DDC6 /* MGTextureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C29978262EE56500A9DDC6 /* MGTextureManager.swift */; };
-		65C2999A26302A2A00A9DDC6 /* mainMenuTheme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 65C2999926302A2A00A9DDC6 /* mainMenuTheme.mp3 */; };
 		65C299A82630D2D700A9DDC6 /* TestUIClick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 65C299A72630D2D700A9DDC6 /* TestUIClick.mp3 */; };
 		65C95CB025EE37AC00EA9857 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C95CAF25EE37AC00EA9857 /* AppDelegate.swift */; };
 		65C95CB625EE37AC00EA9857 /* MGScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C95CB525EE37AC00EA9857 /* MGScene.swift */; };
@@ -191,6 +196,12 @@
 		653F2AB92604B18C0069614C /* UIFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFactory.swift; sourceTree = "<group>"; };
 		653F2ABE2604F2DE0069614C /* MGSettingsPaneEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGSettingsPaneEntity.swift; sourceTree = "<group>"; };
 		653F2AC92604F8050069614C /* MGLabelNodeContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGLabelNodeContainer.swift; sourceTree = "<group>"; };
+		654A973F2638D213007F6867 /* Steam Machine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Steam Machine.mp3"; sourceTree = "<group>"; };
+		654A97402638D213007F6867 /* Floatation device.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Floatation device.mp3"; sourceTree = "<group>"; };
+		654A97412638D213007F6867 /* Astronauts Incorporated.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Astronauts Incorporated.mp3"; sourceTree = "<group>"; };
+		654A97422638D213007F6867 /* Singularity.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Singularity.mp3; sourceTree = "<group>"; };
+		654A97432638D213007F6867 /* Home is where the menu is.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Home is where the menu is.mp3"; sourceTree = "<group>"; };
+		654A97442638D214007F6867 /* Sunshine in disguise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Sunshine in disguise.mp3"; sourceTree = "<group>"; };
 		654D4E9D261CBD0D00D44793 /* fieldPlanetEmitter.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = fieldPlanetEmitter.sks; sourceTree = "<group>"; };
 		654D4E9E261CBD0D00D44793 /* EmitterAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = EmitterAsset.xcassets; sourceTree = "<group>"; };
 		654D4EA4261CC19700D44793 /* ParticleEmitterComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleEmitterComponent.swift; sourceTree = "<group>"; };
@@ -258,7 +269,6 @@
 		65BEF2F0261B7291004BCAE7 /* ActionAnimationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionAnimationComponent.swift; sourceTree = "<group>"; };
 		65BEF2F5261B9F41004BCAE7 /* MGAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGAnimation.swift; sourceTree = "<group>"; };
 		65C29978262EE56500A9DDC6 /* MGTextureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGTextureManager.swift; sourceTree = "<group>"; };
-		65C2999926302A2A00A9DDC6 /* mainMenuTheme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mainMenuTheme.mp3; sourceTree = "<group>"; };
 		65C299A72630D2D700A9DDC6 /* TestUIClick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TestUIClick.mp3; sourceTree = "<group>"; };
 		65C95CAC25EE37AC00EA9857 /* MegaGolf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MegaGolf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C95CAF25EE37AC00EA9857 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -725,7 +735,12 @@
 		65DA3E2C2608BEF20072E8D7 /* music */ = {
 			isa = PBXGroup;
 			children = (
-				65C2999926302A2A00A9DDC6 /* mainMenuTheme.mp3 */,
+				654A97412638D213007F6867 /* Astronauts Incorporated.mp3 */,
+				654A97402638D213007F6867 /* Floatation device.mp3 */,
+				654A97432638D213007F6867 /* Home is where the menu is.mp3 */,
+				654A97422638D213007F6867 /* Singularity.mp3 */,
+				654A973F2638D213007F6867 /* Steam Machine.mp3 */,
+				654A97442638D214007F6867 /* Sunshine in disguise.mp3 */,
 			);
 			path = music;
 			sourceTree = "<group>";
@@ -863,6 +878,7 @@
 				654D4EAA261CD7B500D44793 /* bunkerPlanetEmitter.sks in Resources */,
 				65CB93E4260B948700F79A72 /* ballHit.mp3 in Resources */,
 				652C963C2634733A009BDE2E /* waterPlanetEmitter.sks in Resources */,
+				654A97492638D214007F6867 /* Home is where the menu is.mp3 in Resources */,
 				6551450926233080001BD4C9 /* golfBallShotEmitter.sks in Resources */,
 				65DB45DB2621F5F4009D08BC /* RadialAlphaGradient.fsh in Resources */,
 				6551451226233FAB001BD4C9 /* MovingDashedFill.fsh in Resources */,
@@ -870,12 +886,16 @@
 				658130B825FF80A70065B0E7 /* Colors.plist in Resources */,
 				654D4E9F261CBD0D00D44793 /* fieldPlanetEmitter.sks in Resources */,
 				654F8C2A260D1F7C00A767C1 /* MGPlanetProperties.plist in Resources */,
+				654A974A2638D214007F6867 /* Sunshine in disguise.mp3 in Resources */,
 				658130B325FF80580065B0E7 /* DefaultProperties.plist in Resources */,
 				655E5CFC261E40CB00FC7F01 /* MGLevelProperties.plist in Resources */,
 				65DB45C62621E476009D08BC /* SkyTileSet.sks in Resources */,
+				654A97472638D214007F6867 /* Astronauts Incorporated.mp3 in Resources */,
 				654D4EA0261CBD0D00D44793 /* EmitterAsset.xcassets in Resources */,
+				654A97452638D214007F6867 /* Steam Machine.mp3 in Resources */,
 				65C95CBD25EE37AD00EA9857 /* ImageAsset.xcassets in Resources */,
-				65C2999A26302A2A00A9DDC6 /* mainMenuTheme.mp3 in Resources */,
+				654A97462638D214007F6867 /* Floatation device.mp3 in Resources */,
+				654A97482638D214007F6867 /* Singularity.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1192,7 +1212,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1300;
+				MARKETING_VERSION = 0.1400;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Hkon.MegaGolf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1216,7 +1236,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1300;
+				MARKETING_VERSION = 0.1400;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Hkon.MegaGolf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

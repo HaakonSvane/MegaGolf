@@ -21,6 +21,7 @@ class Level_1_1 : MGGameScene, MGLevelSceneProtocol{
                    levelPar: 5,
                    onlineMatch: onlineMatch)
         
+        let music = MGMusicEntity(songNamed: "Astronauts Incorporated.mp3")
         let f1 = GameObjectFactory.makeFieldPlanet(radius: 90, gravityRadiusFactor: 1.4, angularVelocity: 0.05)
         f1.getNode()?.position = CGPoint(x: 200, y: 120)
         
@@ -41,12 +42,14 @@ class Level_1_1 : MGGameScene, MGLevelSceneProtocol{
         self.entities.append(f3)
         self.entities.append(m1)
         self.entities.append(f4)
+        self.entities.append(music)
         
         self.addChild(f1.getNode()!, isGUI: false)
         self.addChild(f2.getNode()!, isGUI: false)
         self.addChild(f3.getNode()!, isGUI: false)
         self.addChild(m1.getNode()!, isGUI: false)
         self.addChild(f4.getNode()!, isGUI: false)
+        self.addChild(music.getNode()!, isGUI: false)
     }
     
 

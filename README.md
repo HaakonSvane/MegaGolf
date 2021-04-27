@@ -72,11 +72,5 @@ The singleton pattern is used for all factory instances even though this was not
 ### Concurrency
 To provide a smooth user experience, the system performs asset loading in the form of background threading when scene transitions occur. Scenes are populated with many entities that must be initialized before the scene can be transitioned into. The initialization process is done on background threads by the `MGPresenter::loadGame()` and `MGPresenter::loadMenus()` functions (f:_Presenter ↳ MGPresenter.swift_).
 
-
-
-
-
-
-
-
-
+### Peer-to-Peer
+While most of the functionality of the networking portion of the application is provided by Apple, the data being sent must be serializable. This data model is named `MGOnlineMessageModel` (f:_Core_MGOnlineMessageModel.swift_). The data is transmitted unreliably in the update loop of the `MGGameScene` (f:_Scene ↳ Game ↳ MGGameScene.swift_). During game play, the (currently) only data being transmitted is the position and the velocity of a local player ball. Since all other `GhostBallEntity` (f:_Entity ↳GhostBallEntity.swift_) (the local player's visual references to the online opponents) are physics simulated, if an unreliable message fails to deliver, the ghost balls will still move smoothly on each player's device and update its position and velocity data once data is successfully delivered again. The actual code for data transmission is found in `GameCenterManager` (f:_Presenter ↳ GameCenterManager.swift_).

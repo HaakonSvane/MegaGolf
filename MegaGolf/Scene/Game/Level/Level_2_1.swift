@@ -19,6 +19,12 @@ class Level_2_1 : MGGameScene, MGLevelSceneProtocol{
                    goalRadius: 70,
                    levelPar: 10,
                    onlineMatch: onlineMatch)
+        
+        let music = MGMusicEntity(songNamed: "Sunshine is disguise.mp3")
+        
+        self.entities.append(music)
+        
+        self.addChild(music.getNode()!, isGUI: false)
 
     }
     

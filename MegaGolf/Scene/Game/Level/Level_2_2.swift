@@ -19,7 +19,12 @@ class Level_2_2 : MGGameScene, MGLevelSceneProtocol{
                    goalRadius: 70,
                    levelPar: 10,
                    onlineMatch: onlineMatch)
-
+        
+        let music = MGMusicEntity(songNamed: "Singularity.mp3")
+        
+        self.entities.append(music)
+        
+        self.addChild(music.getNode()!, isGUI: true)
     }
     
     required init?(coder aDecoder: NSCoder) {

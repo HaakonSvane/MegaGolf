@@ -21,6 +21,7 @@ class Level_1_3 : MGGameScene, MGLevelSceneProtocol{
                    levelPar: 4,
                    onlineMatch: onlineMatch)
         
+        let music = MGMusicEntity(songNamed: "Steam Machine.mp3")
         
         let f1 = GameObjectFactory.makeFieldPlanet(radius: 180, gravityRadiusFactor: 0.5, angularVelocity: 0.35)
         f1.getNode()?.position = CGPoint(x: 380, y: 0)
@@ -76,14 +77,15 @@ class Level_1_3 : MGGameScene, MGLevelSceneProtocol{
             self.addChild(wp.getNode()!, isGUI: false)
         }
         
-        entities.append(f1)
-        entities.append(f2)
-        entities.append(b1)
+        self.entities.append(f1)
+        self.entities.append(f2)
+        self.entities.append(b1)
+        self.entities.append(music)
         
         self.addChild(f1.getNode()!, isGUI: false)
         self.addChild(f2.getNode()!, isGUI: false)
         self.addChild(b1.getNode()!, isGUI: false)
-        
+        self.addChild(music.getNode()!, isGUI: false)
     }
     
     required init?(coder aDecoder: NSCoder) {
