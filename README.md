@@ -1,7 +1,7 @@
 # MegaGolf
 An iOS Game by Haakon Svane
 
-### Public TestFlight beta key: Not yet received. 
+### Public TestFlight beta key: Not yet received (v. 0.1401 sent for Test Flight beta approval)
 
 ### What is MegaGolf?
 MegaGolf is a golfing game set in space. The player launches a golf ball by drag and release to guide the ball through
@@ -40,6 +40,17 @@ The source code is found inside the _MegaGolf_ directory. The source files are c
 | ↳                  | ↳                                | GameStateMachine        | Statemachine and states for the game play.             |
 | ↳                  | ↳                                | Level                                | All level scenes in the game.                                    |
 | View              | - - -                              | - - -                                 | All MGView models.                                                |
+
+
+## How to install / compile
+The application runs on all iPhone devices with operating system version 14.1 or higher. It is tested on an iPhone Xs operating system version number 14.4.X. It is adviced to run the project on similar hardware and software as no guarantee can be made for any differing versions. Installing and compiling the source code on another system is not advised as it may prove cumbersome. There are two ways of installing the application, either through compiling the source code or installing using Test Flight
+
+### Building the source code
+Opening this bundle requires Xcode and a macOS operating system. This bundle is tested on Xcode 12.4 with macOS 10.15.7 and if it is to be imported to another system, it is advised that the version numbering match these. In the root directory of the project bundle lies a info.plist file. Depending on the specific details regarding the developer certificate of the target user system, the properties of this list may have to be changed to fit the user credentials. This also applies for the code signing settings in the main bundle under target MegaGolf. If all else fails, the source code files could always be manually imported to a new blank Xcode project. In this case, make sure that Main Interface and Launch Screen File in _Bundle Settings_→ Target: _MegaGolf_ → _General_ are both set to _Main_. You may also be promted to manually set the target iOS version to 14.1 because of framework dependencies.
+
+
+### Installing via Test Flight
+The project will be available for anyone to download using Test Flight. At the top of this document will be a invite code for testing.  Installing the game using Test Flight requires the user to first install Test Flight from the App Store. Entering the provided public beta code is done on the main page of Test Flight by pressing Redeem and entering the code. Once this is done, the user will be taken to a beta page for the application where it will be possible to install the game to the local iPhone.
 
 
 
