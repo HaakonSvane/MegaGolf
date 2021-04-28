@@ -17,7 +17,7 @@ class GCValidateView : MGView {
         }
         
         let signText = "In order to play multiplayer you must first sign in to Game Center. Would you like to do this now?"
-        let failText = "There was an error authenticating your Game Center credentials. Please enable Game Center in your phone settings. You will be taken back to the main menu."
+        let failText = "Error authenticating your Game Center credentials. Please enable Game Center in your phone settings. You will be taken back."
         
         let signInAlert = UIFactory.makeTextAlertPane(title: "SIGN IN", text: signText)
         let errorAlert = UIFactory.makeTextAlertPane(title: "ERROR", text: failText)

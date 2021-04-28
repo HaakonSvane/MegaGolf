@@ -61,7 +61,7 @@ class GCValidateViewState : MGViewState{
     }
     
     func backClick(){
-        
+        _ = self.stateMachine?.enter(MainMenuViewState.self)
     }
     
     func onNotifyValidationSuccess(success: Bool){

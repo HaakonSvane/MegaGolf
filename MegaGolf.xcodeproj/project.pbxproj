@@ -1212,7 +1212,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1400;
+				MARKETING_VERSION = 0.1401;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Hkon.MegaGolf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1236,7 +1236,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1400;
+				MARKETING_VERSION = 0.1401;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Hkon.MegaGolf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
