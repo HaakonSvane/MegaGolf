@@ -1,7 +1,9 @@
 # MegaGolf
 An iOS Game by Haakon Svane
 
-### Public TestFlight beta key: Not yet received (v. 0.1401 sent for Test Flight beta approval)
+### Public TestFlight beta link: https://testflight.apple.com/join/coqlsl1D
+### NOTE: 
+In the Implementation documentation, the manual for installing via Test Flight states that installing should be done by redeeming a beta code inside the Test Flight app. This does not work. Instead, click the beta link using an iOS device (14.1 and upwards) and follow the instructions provided by Apple.
 
 ### What is MegaGolf?
 MegaGolf is a golfing game set in space. The player launches a golf ball by drag and release to guide the ball through
@@ -50,7 +52,7 @@ Opening this bundle requires Xcode and a macOS operating system. This bundle is 
 
 
 ### Installing via Test Flight
-The project will be available for anyone to download using Test Flight. At the top of this document will be a invite code for testing.  Installing the game using Test Flight requires the user to first install Test Flight from the App Store. Entering the provided public beta code is done on the main page of Test Flight by pressing Redeem and entering the code. Once this is done, the user will be taken to a beta page for the application where it will be possible to install the game to the local iPhone.
+The project will be available for anyone to download using Test Flight. At the top of this document will be a invite link for testing.  Installing the game using Test Flight requires the user to first install Test Flight from the App Store. Pressing the link using an iOS device (14.1 and upwards) takes you to a web page where you may choose to opt in for the beta build. Then, tap _View in TestFlight_ or _Start Testing_; or tap _Install_ or _Update_ for the app you want to test. The Test Flight page linked to from the invite link also provides more information on how to install.
 
 
 
