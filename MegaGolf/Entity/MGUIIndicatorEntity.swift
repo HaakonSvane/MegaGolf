@@ -14,11 +14,11 @@ enum MGUIIndicatorValue {
 
 class MGUIIndicatorEntity : GKEntity {
     
-    init(atlas: SKTextureAtlas, initialState: MGUIIndicatorValue = .red){
+    init(atlasName: String, initialState: MGUIIndicatorValue = .red){
         super.init()
         
         let nodeComp = NodeComponent()
-        let spriteComp = SpriteComponent(from: atlas, initTextureName: "indicatorIconRed")
+        let spriteComp = SpriteComponent(atlasName: atlasName, initTextureName: "indicatorIconRed")
         let scaleComp = ScaleComponent(x: 1/4, y: 1/4)
         
         self.addComponent(nodeComp)

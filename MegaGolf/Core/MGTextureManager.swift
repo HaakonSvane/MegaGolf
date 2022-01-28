@@ -31,6 +31,8 @@ class MGTextureManager{
     var normalTextures: [String : SKTexture]?
     
     private static var instance: MGTextureManager?
+    private var loadedDataNames: [String]
+    var dispatchGroup: DispatchGroup?
     
     static var shared: MGTextureManager{
         get{
@@ -38,36 +40,58 @@ class MGTextureManager{
                 return inst
             }else{
                 let inst = MGTextureManager()
-                
-                /**
-                    TODO:
-                        - Get all Textures with a normal and add them to a hash map with [textureName : SKTexture]
-                        - Preload all the textures in the hash map and reference them in the singeton instance
-                 */
-                
-                func referencePlanetTexturesWrapper(){
-                    inst.referencePlanetTextures([:])
-                }
-                
-                SKTextureAtlas.preloadTextureAtlasesNamed(["UITexture", "Stars", "StarSky"],
-                                                          withCompletionHandler: {err, atlases in inst.referenceAtlases(atlases)})
-                SKTexture.preload([], withCompletionHandler: {referencePlanetTexturesWrapper()})
+                MGTextureManager.instance = inst
+
                 return inst
             }
         }
     }
     
-    private func referenceAtlases(_ atlases: [SKTextureAtlas]){
-        self.UITextures = atlases[0]
-        self.starTextures = atlases[1]
-        self.starSkyTextures = atlases[2]
-    }
-    
-    private func referencePlanetTextures(_ textures: [String : SKTexture]){
-        return
-    }
-    
     private init() {
-        
+        self.loadedDataNames = []
+    }
+    
+    func flush() {
+        self.loadedDataNames.removeAll()
+    }
+    
+    func getAtlas(named: String) -> SKTextureAtlas {
+        var atl = SKTextureAtlas()
+        if self.loadedDataNames.contains(named) {
+            return SKTextureAtlas(named: named)
+        }
+        if let q = self.dispatchGroup {
+            q.enter()
+            atl = SKTextureAtlas(named: named)
+            atl.preload {
+                print("Finished preloading " + named + " atlas...")
+                q.leave()
+            }
+        }else{
+            atl = SKTextureAtlas(named: named)
+            atl.preload {}
+        }
+        self.loadedDataNames.append(named)
+        return atl
+    }
+    
+    func getRawTexture(named: String) -> SKTexture {
+        var tex = SKTexture()
+        if self.loadedDataNames.contains(named) {
+            return SKTexture(imageNamed: named)
+        }
+        if let q = self.dispatchGroup {
+            q.enter()
+            tex = SKTexture(imageNamed: named)
+            tex.preload {
+                print("Finished preloading " + named + " texture...")
+                q.leave()
+            }
+        }else{
+            tex = SKTexture(imageNamed:  named)
+            tex.preload {}
+        }
+        self.loadedDataNames.append(named)
+        return tex
     }
 }

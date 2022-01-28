@@ -8,11 +8,11 @@
 import GameKit
 
 class MGUISettingsPaneEntity : GKEntity{
-    init(options: [String], atlas: SKTextureAtlas, optionsAreaRelativeHeight: CGFloat, headerText: String = "SETTINGS"){
+    init(options: [String], atlasName: String, optionsAreaRelativeHeight: CGFloat, headerText: String = "SETTINGS"){
         super.init()
         
         let nodeComp = NodeComponent()
-        let spriteComp = SpriteComponent(from: atlas, initTextureName: "settingsPane")
+        let spriteComp = SpriteComponent(atlasName: atlasName, initTextureName: "settingsPane")
         let labelComp = LabelComponent(numLabels: options.count+1)
         let scaleComp = ScaleComponent(x: 1/2, y: 1/2)
         

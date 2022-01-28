@@ -22,7 +22,7 @@ enum MGUIIconType{
 }
 
 class MGUIIconButtonEntity : GKEntity {
-    init(type : MGUIIconType, textureAtlas: SKTextureAtlas, onCompletion : @escaping ()->Void){
+    init(type : MGUIIconType, atlasName: String, onCompletion : @escaping ()->Void){
         super.init()
         
         var textureName: String = ""
@@ -46,7 +46,7 @@ class MGUIIconButtonEntity : GKEntity {
         }
         
         let nodeComp = NodeComponent()
-        let spriteComp = SpriteComponent(from: textureAtlas, initTextureName: textureName+"1")
+        let spriteComp = SpriteComponent(atlasName: atlasName, initTextureName: textureName+"1")
         let touchComp = TouchableCompoment()
         let audioComp = AudioComponent(sound: MGAudioUnit(fileName: "TestUIClick", type: .effect), loopAudio: false)
         let scaleComp = ScaleComponent(x: 1/2, y: 1/2)

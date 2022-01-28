@@ -9,11 +9,11 @@ import GameKit
 
 class YellowStarEntity : GKEntity{
 
-    init(atlas: SKTextureAtlas, radius: CGFloat, gravityRadiusFactor: CGFloat, angularVelocity: CGFloat, config: MGPlanetConfiguration){
+    init(atlasName: String, radius: CGFloat, gravityRadiusFactor: CGFloat, angularVelocity: CGFloat, config: MGPlanetConfiguration){
         super.init()
         
         let nodeComp = NodeComponent()
-        let spriteComp = SpriteComponent(from: atlas, initTextureName: "yellowStar1", isAnimated: true, genericName: "yellowStar")
+        let spriteComp = SpriteComponent(atlasName: atlasName, initTextureName: "yellowStar1", isAnimated: true, genericName: "yellowStar")
         
         let spriteRadius = spriteComp.spriteNode.size.width/2
         

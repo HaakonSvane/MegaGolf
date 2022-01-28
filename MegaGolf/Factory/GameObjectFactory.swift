@@ -15,7 +15,7 @@ struct MGPlanetConfiguration{
 }
 
 class GameObjectFactory {
-    static let starAtlas : SKTextureAtlas = SKTextureAtlas(named: "Stars")
+    static let starAtlasName : String = "Stars"
     static let planetConfiguration : MGPlanetPropertiesParser = MGPlanetPropertiesParser()
     
     static func makeGolfBall(type: MGBallType) -> GolfBallEntity {
@@ -58,7 +58,7 @@ class GameObjectFactory {
     }
     
     static func makeRedStar(radius: CGFloat, gravityRadiusFactor: CGFloat, angularVelocity: CGFloat) -> RedStarEntity {
-        return RedStarEntity(atlas: GameObjectFactory.starAtlas,
+        return RedStarEntity(atlasName: GameObjectFactory.starAtlasName,
                              radius: radius,
                              gravityRadiusFactor: gravityRadiusFactor,
                              angularVelocity: angularVelocity,
@@ -66,7 +66,7 @@ class GameObjectFactory {
     }
     
     static func makeYellowStar(radius: CGFloat, gravityRadiusFactor: CGFloat, angularVelocity: CGFloat) -> YellowStarEntity {
-        return YellowStarEntity(atlas: GameObjectFactory.starAtlas,
+        return YellowStarEntity(atlasName: GameObjectFactory.starAtlasName,
                              radius: radius,
                              gravityRadiusFactor: gravityRadiusFactor,
                              angularVelocity: angularVelocity,

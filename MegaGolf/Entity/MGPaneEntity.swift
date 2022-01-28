@@ -14,7 +14,7 @@ enum MGPaneType {
 }
 
 class MGPaneEntity : GKEntity{
-    init(type: MGPaneType, atlas: SKTextureAtlas){
+    init(type: MGPaneType, atlasName: String){
         super.init()
         
         let textureName: String
@@ -28,7 +28,7 @@ class MGPaneEntity : GKEntity{
         }
         
         let nodeComp = NodeComponent()
-        let spriteComp = SpriteComponent(from: atlas, initTextureName: textureName)
+        let spriteComp = SpriteComponent(atlasName: atlasName, initTextureName: textureName)
         let labelComp = LabelComponent(numLabels: 0)
         let scaleComp = ScaleComponent(x: 1/2, y: 1/2)
         

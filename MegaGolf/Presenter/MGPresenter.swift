@@ -55,7 +55,9 @@ class MGPresenter : GameViewController{
         }else{
             fatalError("Failed to find SKView!")
         }
+        
         // Initializing the managers
+        
         self.sceneManager = MGSceneManager(presenter: self, sceneSize: skView!.frame.size)
         self.viewManager = MGViewManager(presenter: self, viewSize: skView!.frame.size)
         self.GCManager = GameCenterManager(presenter: self)
@@ -76,12 +78,13 @@ extension MGPresenter : MGManagerDelegate {
         _ = self.sceneManager?.requestStateChange(to: LoadingSceneState.self)
         skView?.presentScene(sceneManager?.currentScene)
         
-        // Delay that is presented for the first load. This is to ensure that the Game Center authentification result is logged before entering the main menu.
+        // Delay that is presented for the first load. This is to ensure that the Game Center authentication result is logged before entering the main menu.
         var initialDelay = 0.0
         // The dispach group is notified of the async calls. This is to ensure that if we where to ever force the menus
-        // to load two times, they will happen sequentially and not in parallell (causing crashes due to strange behaviour with the state machines.. Trust me on this...)
+        // to load two times, they will happen sequentially and not in parallel (causing crashes due to strange behaviour with the state machines.. Trust me on this...)
         self.dispatchGroup.enter()
         DispatchQueue.global(qos: .background).async {
+            MGTextureManager.shared.dispatchGroup = self.dispatchGroup
             self.viewManager?.loadMenuViews()
             _ = self.sceneManager?.requestStateChange(to: MenuSceneState.self)
             _ = self.viewManager?.requestStateChange(to: MainMenuViewState.self)
@@ -94,6 +97,7 @@ extension MGPresenter : MGManagerDelegate {
             }
             // After the views have loaded and the menu scene has been initialized, we enter the main thread and present the newly created scene.
             DispatchQueue.main.asyncAfter(deadline: .now() + initialDelay) {
+                MGTextureManager.shared.flush()
                 self.skView?.presentScene((self.sceneManager?.currentScene)!, transition: SKTransition.fade(with: .black, duration: 0.2))
                 self.dispatchGroup.leave()
                 }
@@ -105,11 +109,13 @@ extension MGPresenter : MGManagerDelegate {
         self.skView?.presentScene((self.sceneManager?.currentScene)!, transition: SKTransition.push(with: .left, duration: 0.5))
         self.dispatchGroup.enter()
         DispatchQueue.global(qos: .background).async {
+            MGTextureManager.shared.dispatchGroup = self.dispatchGroup
             self.sceneManager?.loadLevel(sysID: systemID, lvlID: levelID, onlineMatch: onlineMatch)
             self.viewManager?.loadGameViews()
             _ = self.sceneManager?.requestStateChange(to: GameSceneState.self)
             _ = self.viewManager?.requestStateChange(to: GameViewState.self)
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                MGTextureManager.shared.flush()
                 self.skView?.presentScene((self.sceneManager?.currentScene)!, transition: SKTransition.fade(with: .black, duration: 0.5))
                 self.dispatchGroup.leave()
                 }

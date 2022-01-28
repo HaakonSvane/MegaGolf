@@ -18,27 +18,28 @@ import GameplayKit
 class SpriteComponent : GKComponent{
     
     static let nMap_extension : String = "_nMap"
-    weak var atlas: SKTextureAtlas?
     let spriteNode : SKSpriteNode
+    private var atlasName: String?
     private(set) var isAnimated : Bool
     private var animationFrames : [SKTexture]
     
-    init(with textureName: String, addNormalMap: Bool = false){
+    init(textureName: String, addNormalMap: Bool = false){
         self.isAnimated = false
-        let tex = SKTexture(imageNamed: textureName)
+        let tex = MGTextureManager.shared.getRawTexture(named: textureName)
         self.spriteNode = SKSpriteNode(texture: tex, color: .clear, size: tex.size())
         
         if addNormalMap {
-            let nTex = SKTexture(imageNamed: textureName+SpriteComponent.nMap_extension)
+            let nTex = SKTexture(imageNamed: textureName + SpriteComponent.nMap_extension)
             spriteNode.normalTexture = nTex
         }
         self.animationFrames = []
         super.init()
     }
     
-    init(from atlas: SKTextureAtlas, initTextureName: String, isAnimated: Bool = false, genericName: String? = nil){
-        self.atlas = atlas
-        let tex = self.atlas!.textureNamed(initTextureName)
+    init(atlasName: String, initTextureName: String, isAnimated: Bool = false, genericName: String? = nil){
+        self.atlasName = atlasName
+        let atl = MGTextureManager.shared.getAtlas(named: atlasName)
+        let tex = atl.textureNamed(initTextureName)
         self.spriteNode = SKSpriteNode(texture: tex, color: .clear, size: tex.size())
         self.isAnimated = isAnimated
         self.animationFrames = []
@@ -48,13 +49,13 @@ class SpriteComponent : GKComponent{
             guard let name = genericName else {
                 fatalError("When animating a sprite from an atlas, make sure to supply its generic name (atlas name)")
             }
-            let filteredNames = self.atlas!.textureNames.filter{$0.contains(name)}
+            let filteredNames = atl.textureNames.filter{$0.contains(name)}
             for i in 1...filteredNames.count{
-                animationFrames.append(self.atlas!.textureNamed("\(name)\(i)"))
+                animationFrames.append(atl.textureNamed("\(name)\(i)"))
             }
             // This loop is here to make the animation loop back and forth. I could have added this step in the previous loop, but thinking was not on the agenda when writing this.
             for i in (2...filteredNames.count-1).reversed(){
-                animationFrames.append(self.atlas!.textureNamed("\(name)\(i)"))
+                animationFrames.append(atl.textureNamed("\(name)\(i)"))
             }
         }
     }
@@ -71,7 +72,8 @@ class SpriteComponent : GKComponent{
     }
     
     func setTexture(textureName: String){
-        if let atl = self.atlas{
+        if let atlName = atlasName{
+            let atl = SKTextureAtlas(named: atlName)
             self.spriteNode.run(SKAction.setTexture(atl.textureNamed(textureName), resize: false))
         }else{
             self.spriteNode.run(SKAction.setTexture(SKTexture(imageNamed: textureName), resize: false))

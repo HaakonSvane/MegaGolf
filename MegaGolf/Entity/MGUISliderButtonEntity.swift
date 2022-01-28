@@ -15,11 +15,11 @@ struct MGUISliderSettings{
 }
 
 class MGUISliderButtonEntity : GKEntity {
-    init(textureAtlas: SKTextureAtlas, sliderSettings: MGUISliderSettings, onValueChange: @escaping (CGFloat) -> Void){
+    init(atlasName: String, sliderSettings: MGUISliderSettings, onValueChange: @escaping (CGFloat) -> Void){
         super.init()
         
         let nodeComp = NodeComponent()
-        let spriteComp = SpriteComponent(from: textureAtlas, initTextureName: "sliderButton1")
+        let spriteComp = SpriteComponent(atlasName: atlasName, initTextureName: "sliderButton1")
         let touchComp = TouchableCompoment()
         let shapeComp = ShapeComponent()
         let scaleComp = ScaleComponent(x: 1/2, y: 1/2)

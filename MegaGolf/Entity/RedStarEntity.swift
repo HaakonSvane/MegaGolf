@@ -9,11 +9,11 @@ import GameKit
 
 class RedStarEntity : GKEntity {
     
-    init(atlas: SKTextureAtlas, radius: CGFloat, gravityRadiusFactor: CGFloat, angularVelocity: CGFloat, config: MGPlanetConfiguration){
+    init(atlasName: String, radius: CGFloat, gravityRadiusFactor: CGFloat, angularVelocity: CGFloat, config: MGPlanetConfiguration){
         super.init()
         
         let nodeComp = NodeComponent()
-        let spriteComp = SpriteComponent(from: atlas, initTextureName: "redStar1", isAnimated: true, genericName: "redStar")
+        let spriteComp = SpriteComponent(atlasName: atlasName, initTextureName: "redStar1", isAnimated: true, genericName: "redStar")
         
         let spriteRadius = spriteComp.spriteNode.size.width/2
         

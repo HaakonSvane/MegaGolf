@@ -1,13 +1,17 @@
 # MegaGolf
-An iOS Game by Haakon Svane
+An iOS Game by Haakon Svane as a project in Software Architecture at NTNU. The primary goal of the project is to plan and implement architectural and design patterns. Documents for this (Architectural Requirements, Description and Implementation) are found in the _Project Documents_ directory. A trailer made for the project reveal can be seen [here](https://www.youtube.com/watch?v=ixb-aLN8m8g).
 
-### Public TestFlight beta link: https://testflight.apple.com/join/coqlsl1D
+![image](/asset/img/INGAME_LevelSelect.png)
+
+### Public TestFlight beta link: [NOT AVAILABLE]
 ### NOTE: 
 In the Implementation documentation, the manual for installing via Test Flight states that installing should be done by redeeming a beta code inside the Test Flight app. This does not work. Instead, click the beta link using an iOS device (14.1 and upwards) and follow the instructions provided by Apple.
 
 ### What is MegaGolf?
 MegaGolf is a golfing game set in space. The player launches a golf ball by drag and release to guide the ball through
 gravitational obstacles. The aim of the game is to hit the black hole in each level.
+
+![image](/asset/img/INGAME_ONLINE.png)
 
 ## The source code
 The source code is found inside the _MegaGolf_ directory. The source files are categorized for convenience. Below is a table describing each directory and their content.

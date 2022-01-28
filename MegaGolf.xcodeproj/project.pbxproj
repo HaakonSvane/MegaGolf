@@ -66,6 +66,27 @@
 		655E5D12261E481500FC7F01 /* LevelEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655E5D11261E481500FC7F01 /* LevelEntity.swift */; };
 		655E5D1E261E4EFA00FC7F01 /* LevelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655E5D1D261E4EFA00FC7F01 /* LevelData.swift */; };
 		655E5D23261E4FF000FC7F01 /* MenuSceneLevelsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655E5D22261E4FF000FC7F01 /* MenuSceneLevelsFactory.swift */; };
+		6561588727A43EA5003648F5 /* Project Requirements Documentation.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6561588627A43EA5003648F5 /* Project Requirements Documentation.pdf */; };
+		6561588827A43EA5003648F5 /* Project Requirements Documentation.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6561588627A43EA5003648F5 /* Project Requirements Documentation.pdf */; };
+		6561588927A43EA5003648F5 /* Project Requirements Documentation.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6561588627A43EA5003648F5 /* Project Requirements Documentation.pdf */; };
+		6561588B27A43EB6003648F5 /* Project Architecture Documentation.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6561588A27A43EB6003648F5 /* Project Architecture Documentation.pdf */; };
+		6561588C27A43EB6003648F5 /* Project Architecture Documentation.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6561588A27A43EB6003648F5 /* Project Architecture Documentation.pdf */; };
+		6561588D27A43EB6003648F5 /* Project Architecture Documentation.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6561588A27A43EB6003648F5 /* Project Architecture Documentation.pdf */; };
+		6561588F27A43EC3003648F5 /* Class Diagram FULL.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6561588E27A43EC3003648F5 /* Class Diagram FULL.pdf */; };
+		6561589027A43EC3003648F5 /* Class Diagram FULL.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6561588E27A43EC3003648F5 /* Class Diagram FULL.pdf */; };
+		6561589127A43EC3003648F5 /* Class Diagram FULL.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6561588E27A43EC3003648F5 /* Class Diagram FULL.pdf */; };
+		6561589327A43ECA003648F5 /* Component Diagram FULL.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6561589227A43ECA003648F5 /* Component Diagram FULL.pdf */; };
+		6561589427A43ECA003648F5 /* Component Diagram FULL.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6561589227A43ECA003648F5 /* Component Diagram FULL.pdf */; };
+		6561589527A43ECA003648F5 /* Component Diagram FULL.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6561589227A43ECA003648F5 /* Component Diagram FULL.pdf */; };
+		6561589727A43ECF003648F5 /* Project Implementation Documentation.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6561589627A43ECF003648F5 /* Project Implementation Documentation.pdf */; };
+		6561589827A43ECF003648F5 /* Project Implementation Documentation.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6561589627A43ECF003648F5 /* Project Implementation Documentation.pdf */; };
+		6561589927A43ECF003648F5 /* Project Implementation Documentation.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6561589627A43ECF003648F5 /* Project Implementation Documentation.pdf */; };
+		6561589D27A43FD0003648F5 /* INGAME_LevelSelect.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 6561589C27A43FD0003648F5 /* INGAME_LevelSelect.PNG */; };
+		6561589E27A43FD0003648F5 /* INGAME_LevelSelect.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 6561589C27A43FD0003648F5 /* INGAME_LevelSelect.PNG */; };
+		6561589F27A43FD0003648F5 /* INGAME_LevelSelect.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 6561589C27A43FD0003648F5 /* INGAME_LevelSelect.PNG */; };
+		656158A127A43FF2003648F5 /* INGAME_ONLINE.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 656158A027A43FF2003648F5 /* INGAME_ONLINE.PNG */; };
+		656158A227A43FF2003648F5 /* INGAME_ONLINE.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 656158A027A43FF2003648F5 /* INGAME_ONLINE.PNG */; };
+		656158A327A43FF2003648F5 /* INGAME_ONLINE.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 656158A027A43FF2003648F5 /* INGAME_ONLINE.PNG */; };
 		6562958C2614EFAF00F30174 /* GCValidateViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6562958B2614EFAF00F30174 /* GCValidateViewState.swift */; };
 		656295942614F02C00F30174 /* GCValidateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656295932614F02C00F30174 /* GCValidateView.swift */; };
 		6562959F261663D900F30174 /* MoonPlanetEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6562959E261663D900F30174 /* MoonPlanetEntity.swift */; };
@@ -228,6 +249,13 @@
 		655E5D11261E481500FC7F01 /* LevelEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelEntity.swift; sourceTree = "<group>"; };
 		655E5D1D261E4EFA00FC7F01 /* LevelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelData.swift; sourceTree = "<group>"; };
 		655E5D22261E4FF000FC7F01 /* MenuSceneLevelsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSceneLevelsFactory.swift; sourceTree = "<group>"; };
+		6561588627A43EA5003648F5 /* Project Requirements Documentation.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Project Requirements Documentation.pdf"; path = "../../../OneDrive - NTNU/TDT4240/TDT4240_FINAL_PROJECT_DELIVERY/Requirements Documentation/Project Requirements Documentation.pdf"; sourceTree = "<group>"; };
+		6561588A27A43EB6003648F5 /* Project Architecture Documentation.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Project Architecture Documentation.pdf"; path = "../../../OneDrive - NTNU/TDT4240/TDT4240_FINAL_PROJECT_DELIVERY/Architectural Documentation/Project Architecture Documentation.pdf"; sourceTree = "<group>"; };
+		6561588E27A43EC3003648F5 /* Class Diagram FULL.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Class Diagram FULL.pdf"; path = "../../../OneDrive - NTNU/TDT4240/TDT4240_FINAL_PROJECT_DELIVERY/Testing and Implementation Documentation/Class Diagram FULL.pdf"; sourceTree = "<group>"; };
+		6561589227A43ECA003648F5 /* Component Diagram FULL.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Component Diagram FULL.pdf"; path = "../../../OneDrive - NTNU/TDT4240/TDT4240_FINAL_PROJECT_DELIVERY/Testing and Implementation Documentation/Component Diagram FULL.pdf"; sourceTree = "<group>"; };
+		6561589627A43ECF003648F5 /* Project Implementation Documentation.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Project Implementation Documentation.pdf"; path = "../../../OneDrive - NTNU/TDT4240/TDT4240_FINAL_PROJECT_DELIVERY/Testing and Implementation Documentation/Project Implementation Documentation.pdf"; sourceTree = "<group>"; };
+		6561589C27A43FD0003648F5 /* INGAME_LevelSelect.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = INGAME_LevelSelect.PNG; path = "../../../../OneDrive - NTNU/TDT4240/TDT4240_FINAL_PROJECT_DELIVERY/Testing and Implementation Documentation/Figures/INGAME_LevelSelect.PNG"; sourceTree = "<group>"; };
+		656158A027A43FF2003648F5 /* INGAME_ONLINE.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = INGAME_ONLINE.PNG; path = "../../../../OneDrive - NTNU/TDT4240/TDT4240_FINAL_PROJECT_DELIVERY/Testing and Implementation Documentation/Figures/INGAME_ONLINE.PNG"; sourceTree = "<group>"; };
 		6562958B2614EFAF00F30174 /* GCValidateViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCValidateViewState.swift; sourceTree = "<group>"; };
 		656295932614F02C00F30174 /* GCValidateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCValidateView.swift; sourceTree = "<group>"; };
 		6562959E261663D900F30174 /* MoonPlanetEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonPlanetEntity.swift; sourceTree = "<group>"; };
@@ -498,6 +526,35 @@
 			path = LevelConfig;
 			sourceTree = "<group>";
 		};
+		6561588527A43E57003648F5 /* Project Documents */ = {
+			isa = PBXGroup;
+			children = (
+				6561589627A43ECF003648F5 /* Project Implementation Documentation.pdf */,
+				6561589227A43ECA003648F5 /* Component Diagram FULL.pdf */,
+				6561588E27A43EC3003648F5 /* Class Diagram FULL.pdf */,
+				6561588A27A43EB6003648F5 /* Project Architecture Documentation.pdf */,
+				6561588627A43EA5003648F5 /* Project Requirements Documentation.pdf */,
+			);
+			path = "Project Documents";
+			sourceTree = "<group>";
+		};
+		6561589A27A43F9B003648F5 /* asset */ = {
+			isa = PBXGroup;
+			children = (
+				6561589B27A43FA1003648F5 /* img */,
+			);
+			path = asset;
+			sourceTree = "<group>";
+		};
+		6561589B27A43FA1003648F5 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				656158A027A43FF2003648F5 /* INGAME_ONLINE.PNG */,
+				6561589C27A43FD0003648F5 /* INGAME_LevelSelect.PNG */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
 		658130A325FF7DD40065B0E7 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -665,6 +722,8 @@
 		65C95CA325EE37AC00EA9857 = {
 			isa = PBXGroup;
 			children = (
+				6561589A27A43F9B003648F5 /* asset */,
+				6561588527A43E57003648F5 /* Project Documents */,
 				655386102636B2400005C75C /* README.md */,
 				65C95CAE25EE37AC00EA9857 /* MegaGolf */,
 				65C95CC625EE37AD00EA9857 /* MegaGolfTests */,
@@ -873,10 +932,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6561589D27A43FD0003648F5 /* INGAME_LevelSelect.PNG in Resources */,
 				6504E457260B4E2C00CDC79D /* DashedStroke.fsh in Resources */,
+				6561589727A43ECF003648F5 /* Project Implementation Documentation.pdf in Resources */,
 				65C299A82630D2D700A9DDC6 /* TestUIClick.mp3 in Resources */,
 				654D4EAA261CD7B500D44793 /* bunkerPlanetEmitter.sks in Resources */,
+				6561588727A43EA5003648F5 /* Project Requirements Documentation.pdf in Resources */,
 				65CB93E4260B948700F79A72 /* ballHit.mp3 in Resources */,
+				656158A127A43FF2003648F5 /* INGAME_ONLINE.PNG in Resources */,
 				652C963C2634733A009BDE2E /* waterPlanetEmitter.sks in Resources */,
 				654A97492638D214007F6867 /* Home is where the menu is.mp3 in Resources */,
 				6551450926233080001BD4C9 /* golfBallShotEmitter.sks in Resources */,
@@ -888,13 +951,16 @@
 				654F8C2A260D1F7C00A767C1 /* MGPlanetProperties.plist in Resources */,
 				654A974A2638D214007F6867 /* Sunshine in disguise.mp3 in Resources */,
 				658130B325FF80580065B0E7 /* DefaultProperties.plist in Resources */,
+				6561588F27A43EC3003648F5 /* Class Diagram FULL.pdf in Resources */,
 				655E5CFC261E40CB00FC7F01 /* MGLevelProperties.plist in Resources */,
 				65DB45C62621E476009D08BC /* SkyTileSet.sks in Resources */,
 				654A97472638D214007F6867 /* Astronauts Incorporated.mp3 in Resources */,
 				654D4EA0261CBD0D00D44793 /* EmitterAsset.xcassets in Resources */,
 				654A97452638D214007F6867 /* Steam Machine.mp3 in Resources */,
+				6561589327A43ECA003648F5 /* Component Diagram FULL.pdf in Resources */,
 				65C95CBD25EE37AD00EA9857 /* ImageAsset.xcassets in Resources */,
 				654A97462638D214007F6867 /* Floatation device.mp3 in Resources */,
+				6561588B27A43EB6003648F5 /* Project Architecture Documentation.pdf in Resources */,
 				654A97482638D214007F6867 /* Singularity.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -903,6 +969,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6561589827A43ECF003648F5 /* Project Implementation Documentation.pdf in Resources */,
+				6561588C27A43EB6003648F5 /* Project Architecture Documentation.pdf in Resources */,
+				6561589427A43ECA003648F5 /* Component Diagram FULL.pdf in Resources */,
+				6561589E27A43FD0003648F5 /* INGAME_LevelSelect.PNG in Resources */,
+				656158A227A43FF2003648F5 /* INGAME_ONLINE.PNG in Resources */,
+				6561589027A43EC3003648F5 /* Class Diagram FULL.pdf in Resources */,
+				6561588827A43EA5003648F5 /* Project Requirements Documentation.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -910,6 +983,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6561589927A43ECF003648F5 /* Project Implementation Documentation.pdf in Resources */,
+				6561588D27A43EB6003648F5 /* Project Architecture Documentation.pdf in Resources */,
+				6561589527A43ECA003648F5 /* Component Diagram FULL.pdf in Resources */,
+				6561589F27A43FD0003648F5 /* INGAME_LevelSelect.PNG in Resources */,
+				656158A327A43FF2003648F5 /* INGAME_ONLINE.PNG in Resources */,
+				6561589127A43EC3003648F5 /* Class Diagram FULL.pdf in Resources */,
+				6561588927A43EA5003648F5 /* Project Requirements Documentation.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

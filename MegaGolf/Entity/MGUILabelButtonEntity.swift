@@ -16,7 +16,7 @@ enum MGLabelButtonType{
 }
 
 class MGUILabelButtonEntity : GKEntity{
-    init(type : MGLabelButtonType, textureAtlas: SKTextureAtlas, buttonText : String, textColor: UIColor, textRelPos : CGPoint = .zero, onCompletion : @escaping ()->Void){
+    init(type : MGLabelButtonType, atlasName: String, buttonText : String, textColor: UIColor, textRelPos : CGPoint = .zero, onCompletion : @escaping ()->Void){
         super.init()
         
         var textureName : String = ""
@@ -30,7 +30,7 @@ class MGUILabelButtonEntity : GKEntity{
         }
         
         let nodeComp = NodeComponent()
-        let spriteComp = SpriteComponent(from: textureAtlas, initTextureName: textureName+"1")
+        let spriteComp = SpriteComponent(atlasName: atlasName, initTextureName: textureName+"1")
         let touchComp = TouchableCompoment()
         let audioComp = AudioComponent(sound: MGAudioUnit(fileName: "TestUIClick", type: .effect), loopAudio: false)
         let labelComp = LabelComponent(numLabels: 1)

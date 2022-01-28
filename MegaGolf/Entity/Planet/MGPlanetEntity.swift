@@ -18,7 +18,7 @@ class MGPlanetEntity : GKEntity {
         super.init()
         
         let nodeComp = NodeComponent()
-        let spriteComp = SpriteComponent(with: textureName, addNormalMap: true)
+        let spriteComp = SpriteComponent(textureName: textureName, addNormalMap: true)
         
         let spriteRadius = spriteComp.spriteNode.size.width/2
         let lightRComp = LightReceiverComponent()

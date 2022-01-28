@@ -22,7 +22,9 @@ class ShapeComponent : GKComponent {
     init(shapeType: SKShapeType? = nil, name: String? = nil){
         shapes = SKShapeNodeContainer()
         super.init()
-        if let sType = shapeType{shapes.addShape(shapeType: sType, name: name)}
+        if let sType = shapeType{
+            shapes.addShape(shapeType: sType, name: name)
+        }
     }
     
     required init?(coder: NSCoder) {

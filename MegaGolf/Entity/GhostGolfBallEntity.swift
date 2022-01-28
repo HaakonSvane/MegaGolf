@@ -21,7 +21,7 @@ class GhostGolfBallEntity : GKEntity {
         
         let ballScale: CGFloat = 0.3
         let nodeComp = NodeComponent()
-        let spriteComp = SpriteComponent(with: textureName, addNormalMap: true)
+        let spriteComp = SpriteComponent(textureName: textureName, addNormalMap: true)
         let physComp = PhysicsComponent(bodyType: .circular(radius: spriteComp.spriteNode.size.width/2*ballScale))
         let labelComp = LabelComponent(numLabels: 1)
         let lightRComp = LightReceiverComponent()

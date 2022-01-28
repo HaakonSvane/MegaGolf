@@ -13,7 +13,7 @@ class BlackHoleEntity : GKEntity {
         super.init()
         
         let nodeComp = NodeComponent()
-        let spriteComp = SpriteComponent(with: "blackHole")
+        let spriteComp = SpriteComponent(textureName: "blackHole")
         
         let spriteRadius = spriteComp.spriteNode.size.width/2
         
