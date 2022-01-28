@@ -81,12 +81,6 @@
 		6561589727A43ECF003648F5 /* Project Implementation Documentation.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6561589627A43ECF003648F5 /* Project Implementation Documentation.pdf */; };
 		6561589827A43ECF003648F5 /* Project Implementation Documentation.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6561589627A43ECF003648F5 /* Project Implementation Documentation.pdf */; };
 		6561589927A43ECF003648F5 /* Project Implementation Documentation.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6561589627A43ECF003648F5 /* Project Implementation Documentation.pdf */; };
-		6561589D27A43FD0003648F5 /* INGAME_LevelSelect.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 6561589C27A43FD0003648F5 /* INGAME_LevelSelect.PNG */; };
-		6561589E27A43FD0003648F5 /* INGAME_LevelSelect.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 6561589C27A43FD0003648F5 /* INGAME_LevelSelect.PNG */; };
-		6561589F27A43FD0003648F5 /* INGAME_LevelSelect.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 6561589C27A43FD0003648F5 /* INGAME_LevelSelect.PNG */; };
-		656158A127A43FF2003648F5 /* INGAME_ONLINE.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 656158A027A43FF2003648F5 /* INGAME_ONLINE.PNG */; };
-		656158A227A43FF2003648F5 /* INGAME_ONLINE.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 656158A027A43FF2003648F5 /* INGAME_ONLINE.PNG */; };
-		656158A327A43FF2003648F5 /* INGAME_ONLINE.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 656158A027A43FF2003648F5 /* INGAME_ONLINE.PNG */; };
 		6562958C2614EFAF00F30174 /* GCValidateViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6562958B2614EFAF00F30174 /* GCValidateViewState.swift */; };
 		656295942614F02C00F30174 /* GCValidateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656295932614F02C00F30174 /* GCValidateView.swift */; };
 		6562959F261663D900F30174 /* MoonPlanetEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6562959E261663D900F30174 /* MoonPlanetEntity.swift */; };
@@ -120,6 +114,12 @@
 		65A9F9C826012FEE005A7E63 /* HapticComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A9F9C726012FEE005A7E63 /* HapticComponent.swift */; };
 		65A9F9DD26023DFF005A7E63 /* MGSceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A9F9DC26023DFF005A7E63 /* MGSceneManager.swift */; };
 		65A9F9E226023F6D005A7E63 /* SkyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A9F9E126023F6D005A7E63 /* SkyFactory.swift */; };
+		65AD89CD27A458E3003806F0 /* INGAME_LevelSelect.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 65AD89CB27A458E3003806F0 /* INGAME_LevelSelect.PNG */; };
+		65AD89CE27A458E3003806F0 /* INGAME_LevelSelect.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 65AD89CB27A458E3003806F0 /* INGAME_LevelSelect.PNG */; };
+		65AD89CF27A458E3003806F0 /* INGAME_LevelSelect.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 65AD89CB27A458E3003806F0 /* INGAME_LevelSelect.PNG */; };
+		65AD89D027A458E3003806F0 /* INGAME_ONLINE.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 65AD89CC27A458E3003806F0 /* INGAME_ONLINE.PNG */; };
+		65AD89D127A458E3003806F0 /* INGAME_ONLINE.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 65AD89CC27A458E3003806F0 /* INGAME_ONLINE.PNG */; };
+		65AD89D227A458E3003806F0 /* INGAME_ONLINE.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 65AD89CC27A458E3003806F0 /* INGAME_ONLINE.PNG */; };
 		65B42E0525EE61C900E0F27A /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B42E0425EE61C900E0F27A /* SpriteComponent.swift */; };
 		65B42E1025EE744D00E0F27A /* TouchableComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B42E0F25EE744D00E0F27A /* TouchableComponent.swift */; };
 		65BA7AED260CA6FF00971C58 /* MGGamePlayStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BA7AEC260CA6FF00971C58 /* MGGamePlayStateMachine.swift */; };
@@ -254,8 +254,6 @@
 		6561588E27A43EC3003648F5 /* Class Diagram FULL.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Class Diagram FULL.pdf"; path = "../../../OneDrive - NTNU/TDT4240/TDT4240_FINAL_PROJECT_DELIVERY/Testing and Implementation Documentation/Class Diagram FULL.pdf"; sourceTree = "<group>"; };
 		6561589227A43ECA003648F5 /* Component Diagram FULL.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Component Diagram FULL.pdf"; path = "../../../OneDrive - NTNU/TDT4240/TDT4240_FINAL_PROJECT_DELIVERY/Testing and Implementation Documentation/Component Diagram FULL.pdf"; sourceTree = "<group>"; };
 		6561589627A43ECF003648F5 /* Project Implementation Documentation.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Project Implementation Documentation.pdf"; path = "../../../OneDrive - NTNU/TDT4240/TDT4240_FINAL_PROJECT_DELIVERY/Testing and Implementation Documentation/Project Implementation Documentation.pdf"; sourceTree = "<group>"; };
-		6561589C27A43FD0003648F5 /* INGAME_LevelSelect.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = INGAME_LevelSelect.PNG; path = "../../../../OneDrive - NTNU/TDT4240/TDT4240_FINAL_PROJECT_DELIVERY/Testing and Implementation Documentation/Figures/INGAME_LevelSelect.PNG"; sourceTree = "<group>"; };
-		656158A027A43FF2003648F5 /* INGAME_ONLINE.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = INGAME_ONLINE.PNG; path = "../../../../OneDrive - NTNU/TDT4240/TDT4240_FINAL_PROJECT_DELIVERY/Testing and Implementation Documentation/Figures/INGAME_ONLINE.PNG"; sourceTree = "<group>"; };
 		6562958B2614EFAF00F30174 /* GCValidateViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCValidateViewState.swift; sourceTree = "<group>"; };
 		656295932614F02C00F30174 /* GCValidateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCValidateView.swift; sourceTree = "<group>"; };
 		6562959E261663D900F30174 /* MoonPlanetEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonPlanetEntity.swift; sourceTree = "<group>"; };
@@ -289,6 +287,8 @@
 		65A9F9C726012FEE005A7E63 /* HapticComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticComponent.swift; sourceTree = "<group>"; };
 		65A9F9DC26023DFF005A7E63 /* MGSceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGSceneManager.swift; sourceTree = "<group>"; };
 		65A9F9E126023F6D005A7E63 /* SkyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyFactory.swift; sourceTree = "<group>"; };
+		65AD89CB27A458E3003806F0 /* INGAME_LevelSelect.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = INGAME_LevelSelect.PNG; sourceTree = "<group>"; };
+		65AD89CC27A458E3003806F0 /* INGAME_ONLINE.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = INGAME_ONLINE.PNG; sourceTree = "<group>"; };
 		65B42E0425EE61C900E0F27A /* SpriteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
 		65B42E0F25EE744D00E0F27A /* TouchableComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchableComponent.swift; sourceTree = "<group>"; };
 		65BA7AEC260CA6FF00971C58 /* MGGamePlayStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGGamePlayStateMachine.swift; sourceTree = "<group>"; };
@@ -549,8 +549,8 @@
 		6561589B27A43FA1003648F5 /* img */ = {
 			isa = PBXGroup;
 			children = (
-				656158A027A43FF2003648F5 /* INGAME_ONLINE.PNG */,
-				6561589C27A43FD0003648F5 /* INGAME_LevelSelect.PNG */,
+				65AD89CB27A458E3003806F0 /* INGAME_LevelSelect.PNG */,
+				65AD89CC27A458E3003806F0 /* INGAME_ONLINE.PNG */,
 			);
 			path = img;
 			sourceTree = "<group>";
@@ -932,14 +932,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6561589D27A43FD0003648F5 /* INGAME_LevelSelect.PNG in Resources */,
+				65AD89CD27A458E3003806F0 /* INGAME_LevelSelect.PNG in Resources */,
 				6504E457260B4E2C00CDC79D /* DashedStroke.fsh in Resources */,
 				6561589727A43ECF003648F5 /* Project Implementation Documentation.pdf in Resources */,
 				65C299A82630D2D700A9DDC6 /* TestUIClick.mp3 in Resources */,
 				654D4EAA261CD7B500D44793 /* bunkerPlanetEmitter.sks in Resources */,
 				6561588727A43EA5003648F5 /* Project Requirements Documentation.pdf in Resources */,
 				65CB93E4260B948700F79A72 /* ballHit.mp3 in Resources */,
-				656158A127A43FF2003648F5 /* INGAME_ONLINE.PNG in Resources */,
+				65AD89D027A458E3003806F0 /* INGAME_ONLINE.PNG in Resources */,
 				652C963C2634733A009BDE2E /* waterPlanetEmitter.sks in Resources */,
 				654A97492638D214007F6867 /* Home is where the menu is.mp3 in Resources */,
 				6551450926233080001BD4C9 /* golfBallShotEmitter.sks in Resources */,
@@ -972,8 +972,8 @@
 				6561589827A43ECF003648F5 /* Project Implementation Documentation.pdf in Resources */,
 				6561588C27A43EB6003648F5 /* Project Architecture Documentation.pdf in Resources */,
 				6561589427A43ECA003648F5 /* Component Diagram FULL.pdf in Resources */,
-				6561589E27A43FD0003648F5 /* INGAME_LevelSelect.PNG in Resources */,
-				656158A227A43FF2003648F5 /* INGAME_ONLINE.PNG in Resources */,
+				65AD89CE27A458E3003806F0 /* INGAME_LevelSelect.PNG in Resources */,
+				65AD89D127A458E3003806F0 /* INGAME_ONLINE.PNG in Resources */,
 				6561589027A43EC3003648F5 /* Class Diagram FULL.pdf in Resources */,
 				6561588827A43EA5003648F5 /* Project Requirements Documentation.pdf in Resources */,
 			);
@@ -986,8 +986,8 @@
 				6561589927A43ECF003648F5 /* Project Implementation Documentation.pdf in Resources */,
 				6561588D27A43EB6003648F5 /* Project Architecture Documentation.pdf in Resources */,
 				6561589527A43ECA003648F5 /* Component Diagram FULL.pdf in Resources */,
-				6561589F27A43FD0003648F5 /* INGAME_LevelSelect.PNG in Resources */,
-				656158A327A43FF2003648F5 /* INGAME_ONLINE.PNG in Resources */,
+				65AD89CF27A458E3003806F0 /* INGAME_LevelSelect.PNG in Resources */,
+				65AD89D227A458E3003806F0 /* INGAME_ONLINE.PNG in Resources */,
 				6561589127A43EC3003648F5 /* Class Diagram FULL.pdf in Resources */,
 				6561588927A43EA5003648F5 /* Project Requirements Documentation.pdf in Resources */,
 			);
